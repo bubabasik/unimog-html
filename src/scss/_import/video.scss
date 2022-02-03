@@ -1,0 +1,20 @@
+.section_video{
+	text-align: center;
+	font-size: 0;
+	overflow: hidden;
+
+	video{
+		height: 260px;
+	}
+
+	@include media-max($w-md) {
+		& + .footer{
+			margin-top: -40px;
+		}
+	}
+	@include media($w-xl) {
+		video{
+			height: 600px;
+		}
+	}
+}

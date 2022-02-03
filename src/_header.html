@@ -1,0 +1,51 @@
+<div class="page__outer">
+	<header class="header compensate-for-scrollbar">
+		<div class="container">
+			<div class="head__cont row">
+				<div class="head__menu col">
+					<ul class="list-hor">
+						<li>
+							<a href="#" class="mmenu__show">
+								<span class="mmenu__show_icon">
+									<span></span>
+									<span></span>
+									<span></span>
+								</span>
+								<span>КАТАЛОГ</span>
+							</a>
+						</li>
+						<li><a href="./about.html" class="link">О компании</a></li>
+					</ul>
+				</div>
+				<div class="head__logo col">
+					<a href="./index.html" class="logo"><img src="./images/logo.svg" alt=""></a>
+				</div>
+				<div class="head__right col">
+					<div class="head__search">
+						<a href="#modal_search" class="head__btn head__btn-search modalshow" type="button">
+							<svg class="ico ico-center"><use xlink:href="#search" /></svg>
+						</a>
+					</div>
+					<div class="head__phone">
+						<a href="tel:+7 (495) 256-35-56" class="link link_w">+7 (495) 256-35-56</a>
+					</div>
+					<div class="head__wish">
+						<a href="./wishlist.html" class="head__btn head__btn-wish">
+							<svg class="ico ico-center"><use xlink:href="#wish" /></svg>
+							<span>3</span>
+						</a>
+					</div>
+					<div class="head__mmenu d-md-none">
+						<a href="#modal_menu" class="head__btn head__btn-menu mmenu__show">
+							<span class="mmenu__show_icon">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		@@include('sect-mmenu.html')
+	</header>

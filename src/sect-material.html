@@ -1,0 +1,56 @@
+<section class="section_mat">
+	<div class="container">
+		<div class="title title-md">
+			Полезные <br>материалы
+		</div>
+		<div class="mat__cont clearfix">
+			<div class="nav__cont">
+				<button class="nav__item nav__prev"><span class="nav__arrow nav__arrow-left"></span></button>
+				<button class="nav__item nav__next"><span class="nav__arrow nav__arrow-right"></span></button>
+			</div>
+			<div class="mat__slider">
+
+				<!-- ITEM -->
+				<div class="mat__slide">
+					<a href="https://www.youtube.com/watch?v=_J4_94J9TvM" class="mat__item" data-fancybox-video>
+						<span class="mat__img">
+							<img src="./images/product/mat-1.jpg" alt="">
+							<span class="play_i"><svg class="ico"><use xlink:href="#play" /></svg></span>
+						</span>
+						<span class="mat__name">
+							Автодом Мерседес Унимог. Проект Охотник-17. Июнь 21 
+						</span>
+					</a>
+				</div>
+				<!-- # ITEM -->
+
+				<!-- ITEM -->
+				<div class="mat__slide">
+					<a href="https://www.youtube.com/watch?v=_J4_94J9TvM" class="mat__item" data-fancybox-video>
+						<span class="mat__img">
+							<img src="./images/product/mat-2.jpg" alt="">
+							<span class="play_i"><svg class="ico"><use xlink:href="#play" /></svg></span>
+						</span>
+						<span class="mat__name">
+							Автодом Мерседес Унимог. Проект Охотник-17
+						</span>
+					</a>
+				</div>
+				<!-- # ITEM -->
+
+			</div>
+		</div>
+	</div>
+</section>
+<script>
+	$(function(){
+		var mataSlider = $('.mat__slider').slick({
+			infinite: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			dots: false,
+			prevArrow: '.mat__cont .nav__prev',
+			nextArrow: '.mat__cont .nav__next'
+		});
+	})
+</script>

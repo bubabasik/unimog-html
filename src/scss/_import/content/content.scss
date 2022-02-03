@@ -1,0 +1,175 @@
+.title_{
+	h1,
+	h2{
+		font-size: inherit;
+		line-height: inherit;
+		font-weight: inherit;
+		margin: 0;
+		padding: 0;
+	}
+}
+.title{
+	@extend .title_;
+	font-weight: 700;
+	// font-size: 1.5rem;
+	// line-height: 2rem;
+
+	font-size: 1.75rem;
+	line-height: 2rem;
+
+	&-sm{
+		font-size: 1.75rem;
+		line-height: 2rem;
+	}
+	&-md{
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+
+	@include media($w-md) {
+		&-md{
+			font-size: 2rem;
+			line-height: 2.75rem;
+		}
+	}
+	@include media($w-lg) {
+		font-size: 2.375rem;
+		line-height: 3.1875rem;
+	}
+	@include media($w-xl) {
+		font-size: 3.5rem;
+		line-height: 4rem;
+		&-sm{
+			font-size: 2.25rem;
+			line-height: 2.8125rem;
+		}
+		&-md{
+			font-size: 2.375rem;
+			line-height: 3.1875rem;
+		}
+		sup{
+			font-size: 1rem;
+			line-height: 1.5rem;
+			top: -29px;
+			left: 6px;
+		}
+	}
+	@include media($w-xxlg) {
+		font-size: 4.75rem;
+		line-height: 5.4375rem;
+		&-sm{
+			font-size: 3.0625rem;
+			line-height: 3.8125rem;
+		}
+		&-md{
+			font-size: 3.25rem;
+			line-height: 4.375rem;
+		}
+	}
+}
+
+
+.play_i{
+	display: inline-block;
+	vertical-align: top;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	border: 2px solid #fff;
+
+	svg{
+		width: 17px;
+		height: 18px;
+		stroke: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin-left: 3px;
+	}
+
+	@include media($w-xxlg) {
+		width: 82px;
+		height: 82px;
+		svg{
+			width: 27px;
+			height: 30px;
+		}
+	}
+}
+
+.pre{
+	color: $gray;
+	font-size: 1rem;
+	line-height: 1.375rem;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+
+	@include media($w-xxlg) {
+		font-size: 1.375rem;
+		line-height: 1.875rem;
+		letter-spacing: 0.7px;
+		margin-bottom: 13px;
+	}
+}
+
+.close{
+	display: inline-block;
+	vertical-align: top;
+	position: absolute;
+	padding: 0;
+	background: transparent;
+	border: none;
+	transition: background .2s ease-in-out, opacity .2s ease-in-out, transform .2s ease-in-out;
+	border-radius: 50%;
+	z-index: 99;
+	width: 40px;
+	height: 40px;
+	right: 10px;
+	top: 10px;
+
+	&:hover{
+		background: #000;
+		&:before,
+		&:after{
+			background: #fff;
+		}
+	}
+
+	&:before,
+	&:after{
+		content: '';
+		display: inline-block;
+		vertical-align: top;
+		position: absolute;
+		width: 18px;
+		height: 2px;
+		background: #000;
+		top: 50%;
+		left: 50%;
+		transform-origin: 50% 50%;
+		transition: .2s ease-in-out;
+	}
+	&:before{
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}
+	&:after{
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+
+	@include media($w-md) {
+		width: 50px;
+		height: 50px;
+		&:before,
+		&:after{
+			width: 26px;
+		}
+	}
+
+
+}

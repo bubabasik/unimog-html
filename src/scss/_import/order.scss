@@ -1,0 +1,138 @@
+.section_order{
+
+	@include media($w-xl) {
+		.title{
+			max-width: 710px;
+		}
+	}
+	@include media($w-xxlg) {
+		.title{
+			max-width: 850px;
+		}
+	}
+}
+.order__cont{
+	margin-top: 40px;
+	@include media($w-md) {
+		display: flex;
+	}
+	@include media($w-xl) {
+		margin-top: 36px;
+	}
+	@include media($w-xxlg) {
+		margin-top: 52px;
+	}
+}
+.order__item{
+	position: relative;
+	& + &{
+		margin-top: 40px;
+	}
+	@include media($w-md) {
+		flex: 0 0 50%;
+		max-width: 50%;
+		& + &{
+			margin-top: 0;
+		}
+		&:first-child{
+			.order__image{
+				margin: 0 0 0 -60px;
+			}
+			.order__data{
+				padding-right: 30px;
+			}
+		}
+		&:last-child{
+			.order__image{
+				margin: 0 -60px 0 0;
+			}
+			.order__data{
+				padding-left: 30px;
+			}
+		}
+	}
+	@include media($w-lg) {
+		&:first-child{
+			.order__image{
+				margin: 0 0 0 -120px;
+			}
+			.order__data{
+				padding-right: 60px;
+			}
+		}
+		&:last-child{
+			.order__image{
+				margin: 0 -120px 0 0;
+			}
+			.order__data{
+				padding-left: 60px;
+			}
+		}
+	}
+	@include media($w-xxlg) {
+		&:first-child{
+			.order__image{
+				margin: 0 0 0 -200px;
+			}
+			.order__data{
+				padding-right: 118px;
+			}
+		}
+		&:last-child{
+			.order__image{
+				margin: 0 -200px 0 0;
+			}
+			.order__data{
+				padding-left: 118px;
+			}
+		}
+	}
+}
+.order__image{
+
+}
+.order__data{
+	@include media($w-md) {
+		display: flex;
+		flex-flow: column;
+		justify-content: space-between;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		padding: 30px 0;
+		max-width: 380px;
+	}
+	@include media($w-xl) {
+		padding: 59px 0 65px;
+		max-width: 380px;
+	}
+	@include media($w-xxlg) {
+		justify-content: flex-start;
+		max-width: 500px;
+	}
+}
+.order__text{
+	font-size: 1.25rem;
+	line-height: 1.6875rem;
+	font-weight: 700;
+
+	@include media($w-lg) {
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+
+	@include media($w-xxlg) {
+		font-size: 2rem;
+		line-height: 2.6875rem;
+	}
+}
+.order__btn{
+	margin-top: 15px;
+	@include media($w-lg) {
+		margin-top: 30px;
+	}
+	@include media($w-xxlg) {
+		margin-top: 72px;
+	}
+}

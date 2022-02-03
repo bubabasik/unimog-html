@@ -1,0 +1,117 @@
+.pr__item{
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	max-width: 480px;
+	position: relative;
+
+	&:hover{
+		.pr__bottom{
+			opacity: 1;
+			visibility: visible;
+			margin-bottom: 0;
+		}
+	}
+
+	@include media($w-xl) {
+		padding-bottom: 72px;
+	}
+}
+.pr__img{
+
+}
+.pr__name{
+	color: #000;
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+	font-weight: 700;
+	margin-top: 3px;
+
+	@include media($w-md) {
+		font-size: 1.25rem;
+		line-height: 1.6875rem;
+		margin-top: 9px;
+	}
+	@include media($w-lg) {
+		font-size: 1.125rem;
+		line-height: 1.5rem;
+	}
+	@include media($w-xl) {
+		font-size: 1.25rem;
+		line-height: 1.6875rem;
+	}
+	@include media($w-xxlg) {
+		font-size: 1.6875rem;
+		line-height: 2.25rem;
+		margin-top: 6px;
+	}
+}
+.pr__descr{
+	font-size: 1rem;
+	line-height: 1.5rem;
+	color: $gray;
+	margin-top: 5px;
+
+	@include media($w-md) {
+		margin-top: 10px;
+	}
+	@include media($w-xxlg) {
+		font-size: 1.375rem;
+		line-height: 2.0625rem;
+		margin-top: 11px;
+	}
+}
+.pr__bottom{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 11px;
+	transition: .2s ease-in-out;
+
+	@include media($w-xl) {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		opacity: 0;
+		visibility: hidden;
+		margin-bottom: 10px;
+		margin-top: 0;
+	}
+}
+.pr__btn{
+	.btn{
+		font-size: 0.875rem;
+		line-height: 1.1875rem;
+		min-height: 57px;
+		margin-right: 11px;
+	}
+	.btn-transp{
+		&:before{
+			border: 2px solid #000;
+		}
+	}
+	.wishbtn{
+		width: 57px;
+		height: 57px;
+	}
+
+	@include media-min-max($w-lg, $w-xl) {
+		flex: 0 0 200px;
+		max-width: 200px;
+		.btn{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+}
+.pr__stock{
+	color: $gray;
+	font-size: 0.8125rem;
+	line-height: 1.125rem;
+	padding-left: 5px;
+
+	@include media($w-xl) {
+		padding: 0 15px 0 5px;
+	}
+}

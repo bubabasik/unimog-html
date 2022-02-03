@@ -1,0 +1,107 @@
+.section_consult{
+	@include media($w-md) {
+		.title{
+			max-width: 400px;
+		}
+	}
+	@include media($w-xl) {
+		.title{
+			max-width: 520px;
+		}
+	}
+	@include media($w-xxlg) {
+		.title{
+			max-width: 630px;
+		}
+	}
+}
+.consult__cont{
+	margin-top: 33px;
+
+	@include media($w-lg) {
+		display: flex;
+		margin-top: 27px;
+	}
+	@include media($w-xxlg) {
+		margin-top: 44px;
+	}
+}
+.consult__info{
+	margin-top: 27px;
+	@include media($w-lg) {
+		flex: 0 0 34.5%;
+		max-width: 34.5%;
+		align-self: flex-end;
+		margin-top: 0;
+		order: 1;
+	}
+	@include media($w-xxlg) {
+		flex: 0 0 34.2%;
+		max-width: 34.2%;
+		padding-bottom: 9px;
+	}
+}
+.consult__form{
+
+	@include media($w-lg) {
+		flex: 0 0 65.5%;
+		max-width: 65.5%;
+		order: 2;
+		.form{
+			max-width: 590px;
+		}
+	}
+	@include media($w-xxlg) {
+		flex: 0 0 65.8%;
+		max-width: 65.8%;
+		.form{
+			max-width: 809px;
+		}
+	}
+}
+
+.consult__data{
+	font-size: 1rem;
+	line-height: 1.5rem;
+	position: relative;
+	padding-top: 21px;
+	&:before{
+		content: '';
+		display: inline-block;
+		vertical-align: top;
+		position: absolute;
+		width: 80px;
+		height: 1px;
+		top: 0;
+		left: 0;
+		background: #000;
+	}
+
+	@include media($w-md) {
+		&:before{
+			width: 60px;
+		}
+	}
+	@include media($w-xxlg) {
+		font-size: 1.375rem;
+		line-height: 2.0625rem;
+		padding-top: 25px;
+		&:before{
+			width: 82px;
+		}
+	}
+}
+.consult__data-title{
+	color: $gray;
+	margin-bottom: 17px;
+}
+.consult__data-links{
+	li{
+		margin-bottom: 7px;
+	}
+	.link{
+		&:before{
+			height: 1px;
+		}
+	}
+}

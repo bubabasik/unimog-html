@@ -1,0 +1,291 @@
+.section_product{
+	overflow: hidden;
+	padding-bottom: 0;
+
+	@include media($w-xl) {
+		padding-top: 0!important;
+	}
+}
+.product__image{
+
+	@include media($w-xl) {
+		padding-left: 0;
+	}
+}
+.product__image_slider{
+	margin-right: -20px;
+
+	@include media($w-sm) {
+		margin: 0;
+	}
+	@include media($w-xxlg) {
+		margin-right: -73px;
+	}
+}
+.product__image_bottom{
+	margin-top: 30px;
+	padding-right: 20px;
+	position: relative;
+
+	@include media($w-md) {
+		padding-right: 70px;
+		margin-top: 26px;
+	}
+	@include media($w-xxlg) {
+		margin-top: 40px;
+		margin-right: -73px;
+		padding-right: 78px;
+	}
+}
+.product__image-thumbs{
+	margin: 0 -7px;
+
+	.slick-list{
+		overflow: visible;
+	}
+	.slick-slide{
+		padding: 11px 7px;
+		position: relative;
+		&.slick-current{
+			&:before{
+				opacity: 1;
+			}
+		}
+		&:before{
+			content: '';
+			display: inline-block;
+			vertical-align: top;
+			position: absolute;
+			top: 0;
+			left: 6px;
+			right: 6px;
+			height: 2px;
+			background: #000;
+			transition: .2s;
+			opacity: 0;
+		}
+	}
+
+	@include media($w-md) {
+		margin: 0 -6px;
+		.slick-list{
+			overflow: hidden;
+		}
+		.slick-slide{
+			padding: 11px 6px;
+		}
+	}
+	@include media($w-xxlg) {
+		margin: 0 -10px;
+		.slick-slide{
+			padding: 15px 10px;
+		}
+	}
+}
+.product__image-nav{
+	display: none;
+	vertical-align: top;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+
+	@include media($w-md) {
+		display: inline-block;
+	}
+}
+.product__data{
+	font-size: 1rem;
+	line-height: 1.5rem;
+	margin-top: 12px;
+
+	@include media($w-md) {
+		margin-top: 0;
+	}
+	@include media($w-xl) {
+		padding-top: 59px;
+		padding-right: 40px;
+	}
+	@include media($w-xxlg) {
+		padding-right: 90px;
+		font-size: 1.375rem;
+		line-height: 2.0625rem;
+	}
+}
+.product__sub{
+	margin-top: 5px;
+
+	@include media($w-xxlg) {
+		margin-top: 8px;
+	}
+}
+.product__attrs{
+	color: $gray;
+	margin-top: 16px;
+	ul{
+		margin-bottom: 4px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	li{
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		width: 100%;
+		margin-bottom: 4px;
+	}
+
+	@include media($w-md) {
+		margin-top: 15px;
+		li{
+			padding-left: 14px;
+			margin-bottom: 5px;
+			&:before{
+				content: '';
+				display: inline-block;
+				vertical-align: top;
+				position: absolute;
+				background: $gray;
+				width: 4px;
+				height: 4px;
+				border-radius: 50%;
+				left: 0;
+				top: 0.75rem;
+				margin-top: -2px;
+			}
+		}
+	}
+	@include media($w-xl) {
+		display: flex;
+		ul{
+			flex: 0 0 50%;
+			max-width: 50%;
+			padding-right: 20px;
+			margin-bottom: 0;
+		}
+	}
+	@include media($w-xxlg) {
+		margin-top: 20px;
+		ul{
+			&:last-child{
+				padding-left: 22px;
+			}
+		}
+		li{
+			&:before{
+				width: 6px;
+				height: 6px;
+				margin-top: -3px;
+				top: 1.0312rem;
+			}
+		}
+	}
+}
+.product__btn{
+	display: flex;
+	flex-wrap: nowrap;
+	margin-top: 26px;
+	justify-content: space-between;
+
+	@include media-max($w-md) {
+		margin-right: -2px;
+		.btn{
+			padding-left: 30px;
+			padding-right: 30px;
+			&-wish{
+				padding-left: 28px;
+				padding-right: 25px;
+				.ico{
+					margin-left: 9px;
+				}
+			}
+		}
+	}
+	@include media($w-sm) {
+		display: inline-flex;
+		.btn{
+			margin-right: 20px;
+			&-wish{
+				margin-right: 0;
+			}
+		}
+	}
+	@include media-min-max($w-md, $w-lg) {
+		.btn{
+			white-space: nowrap;
+			padding: 0 25px;
+		}
+	}
+	@include media($w-md) {
+		margin-top: 30px;
+		.btn{
+			margin-right: 27px;
+			&-wish{
+				margin-right: 0;
+			}
+		}
+	}
+	@include media($w-xxlg) {
+		margin-top: 41px;
+		.btn{
+			margin-right: 41px;
+			&-wish{
+				margin-right: 0;
+			}
+		}
+	}
+}
+.product__stock{
+	margin-top: 16px;
+	span{
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		border: 1px solid #000;
+		margin-right: 6px;
+	}
+	svg{
+		width: 10px;
+		height: 10px;
+		stroke: #000;
+	}
+
+	@include media-max($w-md) {
+		font-size: 0.8125rem;
+		line-height: 1.125rem;
+		span{
+			margin-right: 5px;
+		}
+	}	
+	@include media($w-xxlg) {
+		span{
+			width: 27px;
+			height: 27px;
+			margin-right: 13px;
+		}
+		svg{
+			width: 12px;
+			height: 12px;
+		}
+	}
+}
+.product__tag{
+	color: $gray;
+	font-size: 0.8125rem;
+	line-height: 1.125rem;
+	margin-top: 25px;
+
+	@include media($w-md) {
+		margin-top: 14px;
+	}
+
+	@include media($w-xxlg) {
+		font-size: 1.375rem;
+		line-height: 2.0625rem;
+		margin-top: 13px;
+	}
+}

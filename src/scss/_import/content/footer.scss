@@ -1,0 +1,273 @@
+.footer{
+	margin-top: 40px;
+	padding-top: 80px;
+	padding-bottom: 51px;
+	background: #101010;
+	color: #fff;
+
+	font-size: 1rem;
+	line-height: 1.5rem;
+
+	a{
+		color: #fff !important;
+		&.link{
+			background-image: linear-gradient(#fff,#fff);
+		}
+	}
+
+	@include media($w-md) {
+		margin-top: 90px;
+	}
+	@include media($w-xlg) {
+		padding-top: 145px;
+		padding-bottom: 99px;
+	}
+	@include media($w-xxlg) {
+		font-size: 1.375rem;
+		line-height: 2.0625rem;
+		padding-bottom: 82px;
+	}
+}
+.foot__top{
+
+}
+.foot__left{
+
+}
+.foot__logo{
+	padding-bottom: 31px;
+	position: relative;
+	font-size: 0;
+	line-height: 1;
+	&:before{
+		content: '';
+		display: inline-block;
+		vertical-align: top;
+		position: absolute;
+		width: 60px;
+		height: 1px;
+		bottom: 0;
+		left: 0;
+		background: rgba(255, 255, 255, 0.25);
+	}
+	img{
+		max-height: 41px;
+	}
+
+	@include media($w-md) {
+		padding-bottom: 61px;
+	}
+	@include media($w-xxlg) {
+		padding-bottom: 69px;
+		img{
+			max-height: 53px;
+		}
+		&:before{
+			width: 71px;
+			left: -18px;
+		}
+	}
+}
+.foot__phone{
+	font-size: 1.625rem;
+	line-height: 1.875rem;
+	margin-top: 17px;
+	a.link{
+		padding-bottom: 4px;
+		background-image: linear-gradient($red,$red);
+	}
+
+	@include media-max($w-lg) {
+		.link{
+			&:before{
+				display: none;
+			}
+		}
+	}
+	@include media($w-md) {
+		font-size: 2.25rem;
+		line-height: 3rem;
+		margin-top: 20px;
+	}
+	@include media($w-xl) {
+		a.link{
+			padding-bottom: 9px;
+		}
+	}
+	@include media($w-xxlg) {
+		font-size: 3.0625rem;
+		line-height: 4.125rem;
+	}
+}
+.foot__email{
+	// margin-top: 5px;
+	margin-top: 10px;
+
+	@include media($w-md) {
+		margin-top: 27px;
+	}
+	@include media($w-xl) {
+		margin-top: 34px;
+	}
+}
+.foot__right{
+	padding-top: 39px;
+	@include media($w-md) {
+		padding-left: 0;
+		padding-top: 4px
+	}
+}
+.fmenu__row{
+
+}
+.fmenu__col{
+	display: flex;
+	flex-flow: column;
+
+
+	&-mob{
+		font-size: 0.875rem;
+		line-height: 1.3125rem;
+		margin-top: 19px;
+	}
+
+	@include media-max($w-md) {
+		&-xs{
+			padding-left: 9px;
+		}
+	}
+	@include media($w-md) {
+		&-mob{
+			display: none !important;
+		}
+	}
+
+	@include media($w-xlg) {
+		flex: 0 0 61.2%;
+		max-width: 61.2%;
+		&:first-child{
+			flex: 0 0 38.8%;
+			max-width: 38.8%;
+		}
+	}
+	@include media($w-xxlg) {
+		flex: 0 0 64.3%;
+		max-width: 64.3%;
+		&:first-child{
+			flex: 0 0 35.7%;
+			max-width: 35.7%;
+		}
+	}
+}
+.fmenu__list{
+	@extend .list-vert;
+	li{
+		margin-bottom: 15px;
+	}
+
+	a{
+		color: #fff!important;
+	}
+	.link{
+		&:before{
+			background: #fff;
+		}
+	}
+
+	&-bottom{
+		margin-top: auto!important;
+	}
+
+	@include media-max($w-md) {
+		&-bottom{
+			display: none!important;
+		}
+	}
+	@include media($w-xxlg) {
+		li{
+			margin-bottom: 15px;
+		}
+		&-bottom{
+			margin-bottom: 9px;
+		}
+	}
+}
+
+.foot__bottom{
+	margin-top: 40px;
+	@include media($w-xl) {
+		margin-top: 60px;
+	}
+	@include media($w-xxlg) {
+		margin-top: 55px;
+	}
+}
+.foot__bottom_left{
+	padding-bottom: 6px;
+}
+.foot__bottom_right{
+	align-self: flex-end;
+	margin-top: 13px;
+	padding-left: 23px;
+
+	@include media($w-md) {
+		text-align: center;
+		margin-top: 0;
+		padding-left: 20px;
+	}
+	@include media($w-xl) {
+		padding-right: 136px;
+	}
+	@include media($w-xxlg) {
+    padding-right: 230px;
+    padding-bottom: 5px;
+	}
+}
+.foot__copy{
+}
+.foot__info{
+	font-size: 0.8125rem;
+	line-height: 1.125rem;
+	color: rgba(255, 255, 255, 0.65);
+	margin-top: 10px;
+	p{
+		margin: 0 0 14px;
+	}
+
+	@include media($w-md) {
+		font-size: 0.875rem;
+		line-height: 1.1875rem;
+		p{
+			margin: 0;
+		}
+	}
+	@include media($w-xxlg) {
+		font-size: 1.1875rem;
+		line-height: 1.625rem;
+	}
+}
+.dev__item{
+	display: inline-block;
+	vertical-align: top;
+	color: rgba(255, 255, 255, 0.65);
+	font-size: 0.875rem;
+	line-height: 1.3125rem;
+	text-decoration: none !important;
+	span{
+		margin-right: 7px;
+	}
+	img{
+		width: 80px;
+		height: 28px;
+	}
+
+	@include media($w-xxlg) {
+
+		font-size: 1.1875rem;
+		line-height: 1.625rem;
+		img{
+			width: 102px;
+			height: 35px;
+		}
+	}
+}
