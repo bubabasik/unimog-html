@@ -74,6 +74,8 @@
 	border-bottom: 2px solid #000;
 	padding-bottom: 12px;
 	background: transparent;
+	font-weight: 500;
+	@include placeholder {color: #000;}
 
 	&.invalid{
 		border-color: red;
@@ -180,7 +182,7 @@
 				left: 0;
 				border: 1px solid #000;
 				z-index: 1;
-				transition: all .2s, border 0s;
+				transition: .2s, border 0s;
 			}
 		}
 	}
@@ -217,9 +219,16 @@
 		}
 		& > span{
 			padding-left: 24px;
+
 			span{
 				width: 18px;
 				height: 18px;
+				background: #fff;
+				// border-radius: 2px;
+				&:before{
+					border-color: $gray;
+					// border-radius: 2px;
+				}
 			}
 		}
 	}

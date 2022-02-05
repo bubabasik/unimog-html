@@ -12,7 +12,11 @@
 		margin = 0;
 
 		margin = wh - navT - itemH;
-		item.css('top', margin + 'px');
+		item.css({
+			'top': margin + 'px',
+			'opacity' : 1,
+			'visibility' : 'visible'
+		});
 
 		if(item.offset().top + itemH > leftT) {
 			btn.addClass('prinfo__btn-hidden');

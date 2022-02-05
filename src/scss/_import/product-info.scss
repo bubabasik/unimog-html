@@ -130,10 +130,13 @@
 	}
 }
 .prinfo__bottom{
+	opacity: 0;
+	visibility: hidden;
 
 	@include media($w-md) {
 		position: absolute;
 		left: 0;
+		top: 150%;
 		overflow: hidden;
 		transition: opacity .2s ease-in-out, visibility .2s ease-in-out, transform .2s ease-in-out;
 		margin-top: -20px;
@@ -426,8 +429,8 @@
 			display: inline-block;
 			vertical-align: top;
 			position: absolute;
-			width: 5px;
-			height: 5px;
+			width: 4.5px;
+			height: 4.5px;
 			border-radius: 50%;
 			background: #000;
 			left: 0;

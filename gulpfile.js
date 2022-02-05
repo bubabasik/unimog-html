@@ -180,7 +180,7 @@ gulp.task('sass', function (done) {
 		.src(path.sass.src)
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
-		.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+		.pipe(autoprefixer(['last 15 versions', '> 0.5%', 'ie 8', 'ie 7'], { cascade: true }))
 		.pipe(gulp.dest(path.sass.dist))
 		.pipe(gulp.dest(path.sass.dist_template))
 		.pipe(rename('style.css'))

@@ -5,7 +5,7 @@ $w-md: 768px;
 $w-lg: 992px;
 $w-xl: 1200px;
 $w-xlg: 1360px;
-$w-xxlg: 1920px;
+$w-xxlg: 1850px;
 
 $red: #FF462D;
 $carrot: $red;
@@ -38,7 +38,6 @@ textarea,
 legend,
 label{
 	font-family: $font;
-	color: $dark;
 	@include placeholder {font-family: $font;}
 }
 a{

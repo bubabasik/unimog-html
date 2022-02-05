@@ -38,7 +38,7 @@
 		transform: none;
 	}
 
-	@include media($w-md) {
+	@include media($w-lg) {
 		vertical-align: middle;
 		width: auto;
 		transform: translateX(-120%);
@@ -53,6 +53,9 @@
 	margin: 0 auto;
 
 	@include media($w-md) {
+		padding: 60px;
+	}
+	@include media($w-lg) {
 		padding: 60px;
 		max-width: 520px;
 	}

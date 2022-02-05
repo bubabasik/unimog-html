@@ -228,7 +228,7 @@
 .foot__info{
 	font-size: 0.8125rem;
 	line-height: 1.125rem;
-	color: rgba(255, 255, 255, 0.65);
+	color: rgba(255, 255, 255, 0.65)!important;
 	margin-top: 10px;
 	p{
 		margin: 0 0 14px;
@@ -249,12 +249,12 @@
 .dev__item{
 	display: inline-block;
 	vertical-align: top;
-	color: rgba(255, 255, 255, 0.65);
 	font-size: 0.875rem;
 	line-height: 1.3125rem;
 	text-decoration: none !important;
 	span{
 		margin-right: 7px;
+		color: rgba(255, 255, 255, 0.65)!important;
 	}
 	img{
 		width: 80px;

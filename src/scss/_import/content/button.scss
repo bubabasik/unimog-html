@@ -238,32 +238,49 @@
 .to_catalog{
 	position: fixed;
 	z-index: 999;
-	transition: all .6s, opacity .2s, visiblity .2s;
+	transition: 1s, opacity .2s, visiblity .2s, background .2s, left 0s;
 	left: 20px;
 	white-space: nowrap;
 	padding: 0 40px 0 0;
-	max-width: 100%;
+	max-width: 300px;
 	span{
 		margin-left: 72px;
+		transition: .2s;
+		transition-delay: .4s;
 	}
 
 	.arrow{
 		margin-top: -1px;
-		transition: .2s;
+		transition: 1s, background .2s;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
 		left: 47px;
+		&:before,
+		&:after{
+			transition: .2s;
+		}
 	}
 
 	&.active{
-		max-width: 60px;
+		max-width: 57px;
 		padding: 0 10px 0 0;
+		&:hover{
+			background: #000;
+			.arrow{
+				background: #fff;
+				&:before,
+				&:after{
+					background: #fff;
+				}
+			}
+		}
 		.arrow{
 			left: 29px;
 		}
 		span{
 			opacity: 0;
+			transition: 0s;
 		}
 	}
 	&.bottom{
@@ -279,13 +296,18 @@
 	}
 	@include media($w-lg) {
 		left: calc(50% - 485px + 20px);
+		&.active{
+			max-width: 60px;
+		}
 	}
 	@include media($w-xl) {
-		left: calc(50% - 600px + 20px);
+		// left: calc(50% - 600px + 20px);
+		left: calc(50vw - 600px + 20px);
 	}
 	@include media($w-xxlg) {
 		left: calc(50% - 780px + 20px);
 		padding-right: 50px;
+		max-width: 400px;
 		span{
 			margin-left: 92px;
 		}

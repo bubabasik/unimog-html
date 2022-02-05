@@ -54,7 +54,8 @@
 	@include media($w-lg) {
 		&:first-child{
 			.order__image{
-				margin: 0 0 0 -120px;
+				// margin: 0 0 0 -120px;
+				margin: 0 0 0 calc( -50vw - 20px + 1200px / 2);
 			}
 			.order__data{
 				padding-right: 60px;
@@ -62,7 +63,8 @@
 		}
 		&:last-child{
 			.order__image{
-				margin: 0 -120px 0 0;
+				// margin: 0 -120px 0 0;
+				margin: 0 calc( -50vw - 20px + 1200px / 2) 0 0;
 			}
 			.order__data{
 				padding-left: 60px;

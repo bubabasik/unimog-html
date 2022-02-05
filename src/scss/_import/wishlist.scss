@@ -251,6 +251,7 @@
 .wishlist__descr{
 	flex: 0 0 420px;
 	max-width: 100%;
+	color: #6f7074;
 
 }
 .wishlist__down{
@@ -287,6 +288,9 @@
 			background: #000;
 			color: #fff;
 			border-color: #000;
+			&:before{
+				border-color: #000;
+			}
 		}
 	}
 
@@ -310,10 +314,20 @@
 		vertical-align: top;
 		width: 29px;
 		height: 29px;
-		border-radius: 50%;
 		position: relative;
-		border: 1px solid $gray;
 		color: $gray;
+		&:before{
+			content: '';
+			display: inline-block;
+			vertical-align: top;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			border-radius: 50%;
+			border: 1px solid $gray;
+		}
 	}
 
 	@include media($w-md) {

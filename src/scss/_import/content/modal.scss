@@ -77,10 +77,11 @@
 	}
 	.fancybox-content{
 		margin: 0!important;
+		width: 100% !important;
 	}
 	.fancybox-slide--video {
-		// padding-left: 0;
-		// padding-right: 0;
+		padding-left: 0;
+		padding-right: 0;
 	}
 
 	@include media($w-xl) {
@@ -89,7 +90,7 @@
 			right: 35px;
 		}
 		.fancybox-slide--video {
-			padding-top: 90px;
+			padding-top: 150px;
 		}
 		.fancybox-content{
 			// vertical-align: bottom;
@@ -214,6 +215,9 @@
 		vertical-align: top;
 		padding: 91px 0;
 		transform: translateY(-50vh);
+		.search__input{
+			border-bottom-width: 1px;
+		}
 	}
 
 	&.active{

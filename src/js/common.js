@@ -119,9 +119,15 @@ $(function(){
 			}
 
 			if(tclg.start + tclg.height / 2 + $(window).scrollTop() > tclg.offset) {
-				tclg.btn.addClass('active').css('top', tclg.position + 'px');
+				tclg.btn.addClass('active').css({
+					'top' : tclg.position + 'px',
+					'left' : tclg.cont.offset().left + 'px'
+				});
 			}else{
-				tclg.btn.removeClass('active').css('top', tclg.start + 'px');
+				tclg.btn.removeClass('active').css({
+					'top' : tclg.start + 'px',
+					'left' : tclg.cont.offset().left + 'px'
+				});
 			}
 
 			if(tclg.btn.offset().top + tclg.height >= tclg.catalog_top) {

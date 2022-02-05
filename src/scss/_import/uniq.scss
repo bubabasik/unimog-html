@@ -5,6 +5,7 @@
 
 	@include media($w-md) {
 		display: flex;
+		align-items: center;
 	}
 }
 .uniq__data{
@@ -13,6 +14,9 @@
 	@include media($w-md) {
 		flex: 0 0 50%;
 		max-width: 50%;
+	}
+	@include media($w-lg) {
+		padding-top: 30px;
 	}
 	@include media($w-xl) {
 		flex: 0 0 32.8%;
@@ -59,7 +63,10 @@
 		}
 	}
 	@include media($w-md) {
-		margin: 0 -70px 0 -30px;
+		margin: 0 -100px 0 -30px;
+	}
+	@include media($w-lg) {
+		margin: 0 -120px 0 0;
 	}
 	@include media($w-xl) {
 		margin: 0 -113px 0 0;
