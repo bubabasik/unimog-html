@@ -325,15 +325,16 @@
 
 	@include media($w-md) {
 		padding-top: 119px;
+		padding-bottom: 100px;
 	}
 	@include media($w-lg) {
 		padding-right: 55px;
 		padding-left: 85px;
+		padding-bottom: 150px;
 	}
 	@include media($w-xl) {
 		flex: 0 0 65%;
 		max-width: 65%;
-		padding-bottom: 150px;
 	}
 	@include media($w-xxlg) {
 		flex: 0 0 65.9%;
@@ -433,11 +434,13 @@
 	font-size: 1.125rem;
 	line-height: 1.5rem;
 	
-	&.active_mob{
-		display: flex;
-		flex-flow: column;
-	}
 
+	@include media-max($w-md) {
+		&.active_mob{
+			display: flex;
+			flex-flow: column;
+		}
+	}
 	@include media($w-md) {
 		font-size: 0.875rem;
 		line-height: 1.25rem;
@@ -569,9 +572,55 @@
 }
 .mmenu__hidden{
 	display: none;
+	li{
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	@include media-max($w-md) {
+		display: inline-block !important;
+	}
 }
 .mmenu__more{
 	font-weight: 700;
+	position: relative;
+
+	&-icon{
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		width: 12px;
+		height: 12px;
+		margin-left: 12px;
+		svg{
+			width: 100%;
+			height: 100%;
+			display: inline-block;
+			&:last-child{
+				display: none;
+			}
+		}
+
+	}
+	&.active{
+		svg{
+			&:first-child{
+				display: none;
+			}
+			&:last-child{
+				display: inline-block;
+			}
+		}
+	}
+
+	@include media($w-xxlg) {
+		&-icon{
+			margin-left: 9px;
+			width: 15px;
+			height: 15px;
+		}
+	}
 }
 .mmenu__split{
 	display: flex;

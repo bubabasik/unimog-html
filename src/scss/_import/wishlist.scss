@@ -355,3 +355,35 @@
 		}
 	}
 }
+
+.wish__to{
+	position: fixed;
+	bottom: 20px;
+	z-index: 999;
+	min-height: 50px;
+	padding: 0 26px 0 31px;
+	transition: 0s, opacity .2s, visibility .2s;
+	opacity: 1;
+	visibility: visible;
+	margin-left: 20px;
+	background: #fff;
+
+	&.bottom{
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.arrow{
+		height: 12.8px;
+		margin-right: 15px;
+		top: -1px;
+		&:before,
+		&:after{
+			height: 9.5px;
+		}
+	}
+
+	@include media($w-lg) {
+		display: none;
+	}
+}

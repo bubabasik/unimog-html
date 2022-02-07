@@ -26,7 +26,7 @@
 			<div class="wish__after">
 				Добавляйте технику в Избранное для ее сравнения и отправки запроса на стоимость
 			</div>
-			<form class="wishlist__cont row">
+			<form class="wishlist__cont row form__order">
 				<div class="wishlist__list col-lg-8">
 
 					<!-- ITEM -->
@@ -226,25 +226,30 @@
 
 				</div>
 				<div class="wishlist__form col-lg-4">
-					<div class="form">
+					<div id="wish-form" class="form">
 						<div class="form__title">Узнать цену техники</div>
 						<div class="form__text">
 							Отправьте запрос и мы вышлем вам полную спецификацию с ценой
 						</div>
 						<div class="form__inp">
-							<input type="text" name="name" value="" placeholder="Имя" class="form__input">
+							<input type="text" name="name" value="" class="form__input">
+							<span class="form__label col-12">Имя</span>
 						</div>
 						<div class="form__inp">
-							<input type="text" name="company" value="" placeholder="Компания" class="form__input">
+							<input type="text" name="company" value="" class="form__input">
+							<span class="form__label col-12">Компания</span>
 						</div>
 						<div class="form__inp">
-							<input type="phone" name="phone" value="" placeholder="Телефон" class="form__input">
+							<input type="phone" name="phone" value="" class="form__input">
+							<span class="form__label col-12">Телефон</span>
 						</div>
 						<div class="form__inp">
-							<input type="text" name="email" value="" placeholder="E-mail" class="form__input">
+							<input type="text" name="email" value="" class="form__input">
+							<span class="form__label col-12">E-mail</span>
 						</div>
 						<div class="form__inp">
-							<textarea name="text" rows="1" placeholder="Комментарий" class="form__textarea form__textarea-auto"></textarea>
+							<textarea name="text" rows="1" class="form__textarea form__textarea-auto"></textarea>
+							<span class="form__label col-12">Комментарий</span>
 						</div>
 						<div class="form__toemail">
 							<label class="form__check">
@@ -267,6 +272,34 @@
 	</section>
 	<!-- # WISH -->
 
+
+	<a href="#wish-form" class="btn btn-transp btn-arr btn-bold wish__to bottom goTo">
+		<i class="arrow arrow-down"></i>
+		<span data-text="Отправить запрос">Отправить запрос</span>
+	</a>
+
+	<script>
+		$(function(){
+			var ws = [];
+			ws.cont = $('.wishlist__cont');
+			ws.form = $('.wishlist__form');
+			ws.btn = $('.wish__to');
+			$(window).on('load scroll resize', function(e) {
+				if(e.type === 'load' || e.type === 'resize') {
+					ws.height = ws.btn.outerHeight();
+					ws.offset = ws.form.offset().top - 30;
+					ws.btn.css('left', ws.cont.offset().left + 'px');
+				}
+
+				if(ws.btn.offset().top + ws.height >= ws.offset) {
+					ws.btn.addClass('bottom');
+				}else{
+					ws.btn.removeClass('bottom');
+				}
+
+			});
+		})
+	</script>
 
 	@@include('_footer.html')
 
