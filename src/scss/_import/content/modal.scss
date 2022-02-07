@@ -232,6 +232,18 @@
 		max-width: 100%;
 	}
 
+	@include media-max($w-md) {
+		&-price{
+			width: 100%;
+			max-width: 100%!important;
+			transform: translateY(150%);
+			vertical-align: bottom;
+			.modal__inner{
+				max-width: 360px;
+				margin: 0 auto;
+			}
+		}
+	}
 	@include media($w-sm) {
 		padding: 60px 40px;
 	}

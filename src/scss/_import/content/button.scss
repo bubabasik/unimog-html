@@ -122,6 +122,13 @@
 			color: #000;
 		}
 	}
+	.arrow{
+		background: #000;
+		&:before,
+		&:after{
+			background: #000;
+		}
+	}
 
 
 	&.btn-bold{
@@ -168,9 +175,11 @@
 		width: 20px;
 		margin-left: 10px;
 		transition: .2s ease-in-out;
+		background: #fff;
 		&:before,
 		&:after{
 			width: 8px;
+			background: #fff;
 		}
 	}
 
@@ -243,6 +252,14 @@
 	white-space: nowrap;
 	padding: 0 40px 0 0;
 	max-width: 300px;
+	&-invert{
+		background: #fff;
+		mix-blend-mode: difference;
+		&:hover{
+			mix-blend-mode: overlay;
+		}
+		// mix-blend-mode: color;
+	}
 	span{
 		margin-left: 72px;
 		transition: .2s;
@@ -267,6 +284,9 @@
 		padding: 0 10px 0 0;
 		&:hover{
 			background: #000;
+			& + .to_catalog{
+				display: none;
+			}
 			.arrow{
 				background: #fff;
 				&:before,
@@ -286,6 +306,54 @@
 	&.bottom{
 		opacity: 0;
 		visibility: hidden;
+	}
+
+	&-negative{
+		z-index: 1001;
+		&.to_catalog-invert{
+			// mix-blend-mode: color-dodge;
+		}
+		&:before{
+			border: 1px solid #fff;
+		}
+		&:hover{
+			&:before{
+				border-color: #fff;
+			}
+		}
+		span{
+			&:before,
+			&:after{
+				color: #fff;
+			}
+		}
+		.arrow{
+			background: #fff;
+			&:before,
+			&:after{
+				background: #fff;
+			}
+		}
+
+
+		&.btn-bold{
+			&:before{
+				border-color: #fff;
+			}
+		}
+
+		&.active{
+			&:hover{
+				background: #fff;
+				.arrow{
+					background: #000;
+					&:before,
+					&:after{
+						background: #000;
+					}
+				}
+			}
+		}
 	}
 
 	@include media(550px) {

@@ -166,7 +166,10 @@ $(function(){
 
 	$('.wish').on('click', function(e){
 		e.preventDefault();
-		showModal('#modal_wish', 'fancy-wish');
+		$(this).toggleClass('active');
+		if($(this).hasClass('wish-add')) {
+			showModal('#modal_wish', 'fancy-wish');
+		}
 	})
 
 	$(document).on('click','.modalshow', function(e){
