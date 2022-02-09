@@ -182,7 +182,8 @@ $(function(){
 			new ScrollMagic.Scene({
 				triggerElement: this, 
 				triggerHook: "onEnter",
-				offset: window.innerHeight * 0.25 
+			//	offset: window.innerHeight * 0.25 
+			    offset: window.innerHeight * 0.1 
 			})
 			.reverse(false)
 			.setClassToggle(this, "animated")

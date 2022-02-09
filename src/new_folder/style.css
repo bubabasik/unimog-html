@@ -1,0 +1,89 @@
+/*Анимация заголовков title*/
+.title:not(.slider__title){
+  visibility: hidden;
+}
+.line{
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+/*Анимация основного текста*/
+.anim-item{
+    opacity: 0;
+    transform: translateY(40px);
+}
+.animated{
+    animation: animateText 0.4s linear forwards;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-name: animateText;
+    backface-visibility: hidden;
+}
+@-webkit-keyframes animateText{
+    0% {
+        opacity: 0;
+        transform: translateX(0px)translateY(0px)rotate(0deg)scale(1,1);
+        animation-timing-function: linear;
+    }
+    1% {
+        opacity: 0;
+        transform: translateX(0px)translateY(10px)rotate(0deg)scale(1,1);
+        animation-timing-function: ease-in-out;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px)translateY(0px)rotate(0deg)scale(1,1);
+    }
+}
+
+/*Параллакс фото на Главной "Автомобильный дом Восток"*/  
+.triggerImg{
+    overflow: hidden;
+    position: relative;
+}
+.about__image .img__background{
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+}   
+
+@media (min-width: 200px){
+    .triggerImg {padding-top: 65.67%;}
+}
+@media (min-width: 768px){
+    .triggerImg {padding-top: 144.67%;}
+}
+@media (min-width: 1200px) and (max-width: 1849px){
+    .catnav__image {margin: 0 -344px 0 -60px;}
+}
+@media (min-width: 1200px){
+    .triggerImg {padding-top: 99.67%;}    
+    /*Видео*/ 
+    section.section_video {
+        height: 100vh;
+        padding-bottom: 0px;
+        margin-top: 60px; 
+        margin-bottom: -50vh;         
+    }
+    .section_video video{
+        clip: rect(0vh, 100vw, 100vh, 0vw);
+        width: 101vw;
+        height: 101vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: center;
+        object-position: center;
+    }
+}
