@@ -1,5 +1,5 @@
-/*Анимация заголовков title*/
-.title:not(.slider__title){
+/*Анимация заголовков*/
+.anim-title{
   visibility: hidden;
 }
 .line{
@@ -9,11 +9,11 @@
 }
 
 /*Анимация основного текста*/
-.anim-item{
+.anim-text{
     opacity: 0;
     transform: translateY(40px);
 }
-.animated{
+.anim-text.animated{
     animation: animateText 0.4s linear forwards;
     animation-duration: 0.4s;
     animation-timing-function: linear;

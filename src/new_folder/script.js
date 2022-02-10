@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-   /*Анимация заголовков title*/
+   /*Анимация заголовков*/
       let splitWords = function (selector) {
         var elements = document.querySelectorAll(selector);
         elements.forEach(function (el) {
@@ -51,8 +51,8 @@ $( document ).ready(function() {
         }
         return lines;
       };
-      splitLines(".title");
-      let revealText = document.querySelectorAll(".title:not(.slider__title)");
+      splitLines(".anim-title");
+      let revealText = document.querySelectorAll(".anim-title");
       gsap.registerPlugin(ScrollTrigger);
       let revealLines = revealText.forEach((element) => {
         const lines = element.querySelectorAll(".words");
