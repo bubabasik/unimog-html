@@ -29,7 +29,7 @@ var path = {
 	sass : {
 		src : "src/scss/style.scss",
 		dist : "dist/css",
-		dist_template : "../public_html/catalog/view/theme/avclub/css",
+		dist_template : "../public_html/catalog/view/theme/unimog/css",
 	},
 	js : {
 		src : [
