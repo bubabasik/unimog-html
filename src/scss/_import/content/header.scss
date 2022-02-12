@@ -183,6 +183,11 @@
 				fill: #000;
 			}
 		}
+		&.active{
+			span{
+				opacity: 1;
+			}
+		}
 		svg{
 			stroke: #000;
 			fill: transparent
@@ -195,6 +200,8 @@
 			right: 1px;
 			top: -1px;
 			color: #000;
+			transition: .2s;
+			opacity: 0;
 		}
 	}
 	&-search{
