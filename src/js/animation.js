@@ -1,5 +1,52 @@
 $( document ).ready(function() {
-   /*Анимация заголовков*/
+	/*Плавнный скролл*/   
+	SmoothScroll({
+		// Время скролла 400 = 0.4 секунды
+		animationTime    : 800,
+		// Размер шага в пикселях 
+		stepSize         : 75,
+		// Ускорение 
+		accelerationDelta : 30,  
+		// Максимальное ускорение
+		accelerationMax   : 2,   
+		// Поддержка клавиатуры
+		keyboardSupport   : true,  
+		// Шаг скролла стрелками на клавиатуре в пикселях
+		arrowScroll       : 50,
+		// Pulse (less tweakable)
+		// ratio of "tail" to "acceleration"
+		pulseAlgorithm   : true,
+		pulseScale       : 4,
+		pulseNormalize   : 1,
+		overscrollEffect: 'bounce',
+		// Поддержка тачпада
+		touchpadSupport   : true,
+	})  
+	
+	var windowWidth = $(window).width();
+	if(windowWidth > 1200){
+		/*Анимация ВИДЕО*/
+		var triggerVideo = document.getElementsByClassName("section_video")[0];
+		var video = document.getElementsByClassName("animate-video")[0];
+		gsap.registerPlugin(ScrollTrigger);
+		const tl = gsap.timeline({
+		  scrollTrigger: {
+			trigger: triggerVideo,
+			scrub: true,
+			pin: true,
+			start: "top top",
+			end: "+=150%"
+		  }
+		})
+		.to(video, {
+		  scale: 0.66, 
+		  y:"-50vh",
+		  ease: "none",
+		  delay: 0.4
+		})
+	}	
+	
+   /*Анимация заголовков title*/
       let splitWords = function (selector) {
         var elements = document.querySelectorAll(selector);
         elements.forEach(function (el) {
@@ -59,7 +106,7 @@ $( document ).ready(function() {
         let tl = gsap.timeline({
           scrollTrigger: {
            trigger: element,
-    	   start: "+100 bottom",
+    	   start: "bottom bottom",
            toggleActions: "play none none none"
           }
         });
@@ -71,35 +118,11 @@ $( document ).ready(function() {
           skewY: 7,
           stagger:0.2
         })
-      });
-      
-	/*Плавнный скролл*/   
-	SmoothScroll({
-		// Время скролла 400 = 0.4 секунды
-		animationTime    : 800,
-		// Размер шага в пикселях 
-		stepSize         : 75,
-		// Ускорение 
-		accelerationDelta : 30,  
-		// Максимальное ускорение
-		accelerationMax   : 2,   
-		// Поддержка клавиатуры
-		keyboardSupport   : true,  
-		// Шаг скролла стрелками на клавиатуре в пикселях
-		arrowScroll       : 50,
-		// Pulse (less tweakable)
-		// ratio of "tail" to "acceleration"
-		pulseAlgorithm   : true,
-		pulseScale       : 4,
-		pulseNormalize   : 1,
-		overscrollEffect: 'bounce',
-		// Поддержка тачпада
-		touchpadSupport   : true,
-	})    
+      });  
 
 	/*Параллакс фото на Главной "Автомобильный дом Восток"*/
-    var section = document.getElementsByClassName('triggerImg')[0]
-    var img = document.getElementsByClassName('img__background')[0]
+    var section = document.getElementsByClassName('triggerImg')[0];
+    var img = document.getElementsByClassName('img__background')[0];
     gsap.to(img, {
       scrollTrigger: {
         trigger: section,
@@ -110,25 +133,4 @@ $( document ).ready(function() {
       y: section.offsetHeight - img.offsetHeight,
       ease: "none"
     });
-    
-	var windowWidth = $(window).width();
-	if(windowWidth > 1200){
-		/*Анимация ВИДЕО*/
-		gsap.registerPlugin(ScrollTrigger);
-		const tl = gsap.timeline({
-		  scrollTrigger: {
-			trigger: ".section_video",
-			scrub: true,
-			pin: true,
-			start: "top top",
-			end: "+=150%"
-		  }
-		})
-		.to(".section_video video", {
-		  scale: 0.66, 
-		  y:"-50vh",
-		  ease: "none",
-		  delay: 0.4
-		})
-	}
 });
