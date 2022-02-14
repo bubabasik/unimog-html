@@ -173,3 +173,53 @@
 
 
 }
+
+
+.empty__cont{
+	max-width: 320px;
+
+	@include media($w-lg) {
+		max-width: 420px;
+	}
+	@include media($w-xxlg) {
+		max-width: 550px;
+	}
+}
+.empty__title{
+	font-weight: 700;
+	font-size: 1.25rem;
+	line-height: 1.6875rem;
+
+	@include media($w-lg) {
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+	@include media($w-xxlg) {
+		font-size: 2.0625rem;
+		line-height: 2.5rem;
+	}
+}
+.empty__text{
+	font-size: 1rem;
+	line-height: 1.5rem;
+	margin-top: 10px;
+	@include media($w-xxlg) {
+		font-size: 1.375rem;
+		line-height: 1.875rem;
+		margin-top: 16px;
+	}
+}
+.empty__btn{
+	margin-top: 31px;
+
+	@include media($w-lg) {
+		margin-top: 41px;
+	}
+	@include media($w-xxlg) {
+		margin-top: 46px;
+		.btn{
+			min-height: 70px;
+			padding: 0 40px;
+		}
+	}
+}
