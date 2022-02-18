@@ -134,6 +134,14 @@
 	justify-content: space-between;
 	margin-top: 6px;
 
+	.arrow{
+		background: #000;
+		&:before,
+		&:after{
+			background: #000;
+		}
+	}
+
 	@include media($w-md) {
 		margin-top: 32px;
 	}

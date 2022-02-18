@@ -506,6 +506,10 @@
 		margin-top: 16px;
 	}
 
+	&-hide{
+		margin: 0 !important;
+	}
+
 	@include media-min-max($w-md, $w-lg) {
 		flex: 0 0 calc(40% - 40px);
 		max-width: calc(40% - 40px);
