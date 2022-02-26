@@ -1,0 +1,303 @@
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	background: #fff;
+	& + [class*="section_"]{
+		padding-top: 40px;
+	}
+
+	&.fixed{
+		padding-bottom: 0;
+	}
+
+	@include media($w-lg) {
+		&.fixed{
+			.head__logo{
+				img{
+					max-height: 60px;
+				}
+			}
+		}
+	}
+	@include media($w-xl) {
+		& + [class*="section_"]{
+			padding-top: 20px;
+		}
+		&.fixed{
+			.head__logo{
+				img{
+					max-height: 80px;
+					padding: 0;
+				}
+				.logo{
+					min-height: 80px;
+				}
+			}
+		}
+	}
+	@include media($w-xlg) {
+		.container{
+			max-width: 1320px;
+		}
+	}
+	@include media($w-xxlg) {
+		.container{
+			max-width: 1720px;
+		}
+	}
+}
+.head__cont{
+	align-items: center;
+	justify-content: space-between;
+
+	@include media($w-xl) {
+		align-items: flex-end;
+	}
+}
+.head__menu{
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	a{
+		//padding-bottom: 2px;
+		padding-bottom: 8px;
+		vertical-align: middle;
+	}
+	li{
+		margin-right: 20px;
+	}
+
+	@include media-max($w-md) {
+		display: none;
+	}
+	@include media($w-md) {
+		flex: 0 0 40%;
+		max-width: 40%;
+	}
+	@include media($w-lg) {
+		font-size: 0.875rem;
+		flex: 0 0 35%;
+		max-width: 35%;
+		// padding-bottom: 30px;
+		li{
+			margin-right: 41px;
+		}
+	}
+	@include media($w-xl) {
+		padding-bottom: 30px;
+	}
+	@include media($w-xxlg) {
+		font-size: 1.1875rem;
+		line-height: 1.625rem;
+		padding-bottom: 28px;
+	}
+}
+.head__logo{
+	text-align: center;
+	font-size: 0;
+	flex: 0 0 140px;
+	max-width: 140px;
+	padding-right: 10px;
+	img{
+		max-height: 60px;
+		transition: .2s;
+	}
+
+	@include media($w-md) {
+		flex: 0 0 20%;
+		max-width: 20%;
+		padding-left: 10px;
+		padding-right: 10px;
+		img{
+			// max-height: 70px;
+		}
+	}
+	@include media($w-lg) {
+		padding-left: 20px;
+		padding-right: 20px;
+		img{
+			max-height: 80px;
+		}
+	}
+	@include media($w-xl) {
+		flex: 0 0 30%;
+		max-width: 30%;
+		img{
+			max-height: 100px;
+			padding-top: 20px;
+		}
+	}
+}
+.logo{
+	display: inline-flex;
+	align-items: center;
+	min-height: 60px;
+	padding-top: 6px;
+		@include media($w-xl){
+			padding-top: 0px;
+			min-height: 100px;
+		}
+}
+.head__right{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	@include media-max($w-md) {
+		flex: 0 0 calc(100% - 140px);
+		max-width: calc(100% - 140px);
+		padding-left: 0;
+	}
+	@include media($w-md) {
+		flex: 0 0 40%;
+		max-width: 40%;
+	}
+	@include media($w-lg) {
+		align-items: flex-end;
+		padding-right: 7px;
+		flex: 0 0 35%;
+		max-width: 35%;
+	}
+	@include media($w-xl) {
+		margin-bottom: 18px;
+	}
+	@include media($w-xxlg) {
+		padding-right: 15px;
+	}
+}
+.head__btn{
+	display: inline-block;
+	vertical-align: top;
+	width: 35px;
+	height: 40px;
+	position: relative;
+	padding: 0;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+
+	&-menu{
+		.mmenu__show_icon{
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+		}
+	}
+	&-wish{
+		&:hover{
+			svg{
+				fill: #000;
+			}
+		}
+		&.active{
+			span{
+				opacity: 1;
+			}
+		}
+		svg{
+			stroke: #000;
+			fill: transparent
+		}
+		span{
+			display: inline-block;
+			vertical-align: top;
+			position: absolute;
+			font-size: 0.8125rem;
+			right: 1px;
+			top: -1px;
+			color: #000;
+			transition: .2s;
+			opacity: 0;
+		}
+	}
+	&-search{
+		&:hover{
+			svg{
+				fill: $gray;
+				stroke: $gray;
+			}
+		}
+		svg{
+			width: 22px;
+			height: 22px;
+			fill: #000;
+			stroke: #000;
+		}
+	}
+
+	@include media($w-md) {
+		width: 40px;
+		&-wish{
+			span{
+				right: 4px;
+				top: -2px;
+			}
+		}
+	}
+	@include media($w-xl) {
+		&-search{
+			margin-bottom: 2px;
+		}
+	}
+}
+.head__search{
+	@include media-max($w-md) {
+		display: none;
+	}
+}
+.head__phone{
+	font-weight: 700;
+	font-size: 0.75rem;
+	margin-right: 13px;
+	/*.link{
+		background-size: 100% 2px;
+		transition: .2s ease-in-out;
+		&:hover{
+			background-image: linear-gradient($red,$red);
+		}
+	}*/
+
+	@include media($w-md) {
+		font-size: 0.875rem;
+		margin-left: 20px;
+	}
+	@include media($w-lg) {
+		margin-bottom: 11px;
+		margin-right: 31px;
+		margin-left: 30px;
+		a{
+			padding-bottom: 9px;
+		}
+	}
+	@include media($w-xxlg) {
+		font-size: 1.1875rem;
+		line-height: 1.625rem;
+		a{
+			padding-bottom: 6px;
+		}
+	}
+}
+.head__wish{
+	.head__btn{
+		svg{
+			width: 12px;
+			height: 18px;
+		}
+	}
+	@include media($w-md) {
+		.head__btn{
+			svg{
+				width: 14px;
+				height: 20px;
+			}
+		}
+	}
+}
+.head__mmenu{
+	margin: 0 -8px 0 12px;
+}

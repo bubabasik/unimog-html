@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Название страницы</title>
+
+	@@include('_head.html')
+
+</head>
+<body class="common-home">
+
+	@@include('_header.html')
+
+	<!-- SEARCH -->
+	<section class="section_search">
+		<div class="container">
+			<div class="bread__cont">
+				<ul>
+					<li><a href="./index.html" class="link">Главная</a></li>
+					<li><span>Результаты поиска</span></li>
+				</ul>
+			</div>
+			<div class="title title-sm">
+				<h1>Результаты поиска</h1>
+			</div>
+
+			<form action="#" class="search__form">
+				<input type="text" name="search" value="щетка" class="search__input" placeholder="Введите ваш запрос">
+				<button class="search__clear" type="button">
+					<svg class="ico ico-center"><use xlink:href="#close" /></svg>
+				</button>
+			</form>
+
+
+			<div class="search__cont">
+				
+				<div class="search__rec">
+					<div class="search__rec-title">
+						Возможно вы имели ввиду:
+					</div>
+					<div class="search__rec-val">
+						<ul class="list-vert">
+							<li><a href="#" class="link">Щетка подметальная</a></li>
+							<li><a href="#" class="link">Отвал снегоуборочный</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+	<!-- # SEARCH -->
+
+
+	@@include('_footer.html')
+
+</body>
+</html>

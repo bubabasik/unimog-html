@@ -1,0 +1,178 @@
+
+
+$w-sm: 450px;
+$w-md: 768px;
+$w-lg: 992px;
+$w-xl: 1200px;
+$w-xlg: 1360px;
+$w-xxlg: 1850px;
+
+$red: #FF462D;
+$carrot: $red;
+$gray: #666;
+
+$font: 'Gilroy', sans-serif;
+
+body{
+	font-family: $font;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: 1.35;
+	font-weight: 500;
+	overflow-x: hidden;
+	position: relative;
+	padding-top: 60px;
+
+	@include media($w-xl) {
+		padding-top: 120px;
+	}
+	@include media($w-xxlg) {
+
+	}
+
+}
+input,
+button,
+textarea,
+legend,
+label{
+	font-family: $font;
+	@include placeholder {font-family: $font;}
+}
+a{
+	transition: .2s;
+
+	&:focus{
+		color: currentColor;
+	}
+	&:hover,
+	&:active{
+		text-decoration: none;	
+	}
+}
+header,
+section,
+footer{
+	position: relative;
+}
+
+.page__outer{
+	
+}
+
+section{
+	position: relative;
+	z-index: 5;
+}
+
+
+
+.ico{
+	display: inline-block;
+	vertical-align: top;
+
+	&-center{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+	}
+}
+
+.list-vert{
+	display: inline-block;
+	vertical-align: top;
+	padding: 0;
+	margin: 0;
+	li{
+		display: inline-block;
+		vertical-align: top;
+		width: 100%;
+		list-style: none;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+.list-hor{
+	display: inline-block;
+	vertical-align: top;
+	padding: 0;
+	margin: 0;
+	li{
+		display: inline-block;
+		vertical-align: top;
+		float: left;
+		list-style: none;
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}
+
+
+
+.container{
+	position: relative;
+	z-index: 5;
+	padding-left: 20px;
+	padding-right: 20px;
+
+}
+
+.row{
+	margin-left: -20px;
+	margin-right: -20px;
+}
+.col,
+.col-auto,
+.col-xs,
+.col-xs-auto,
+.col-sm,
+.col-sm-auto,
+.col-md,
+.col-md-auto,
+.col-lg,
+.col-lg-auto,
+.col-xl,
+.col-xl-auto,
+.col-xlg,
+.col-xlg-auto
+.col-xxlg,
+.col-xxlg-auto{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+@for $i from 1 through 12 {
+	.col-#{$i},
+	.col-xs-#{$i},
+	.col-sm-#{$i},
+	.col-md-#{$i},
+	.col-lg-#{$i},
+	.col-xl-#{$i},
+	.col-xlg-#{$i},
+	.col-xxlg-#{$i} { 
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+
+[class*="section_"]{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	
+	@include media($w-md) {
+		padding: 60px 0;
+	}
+	@include media($w-xl) {
+		padding-top: 90px;
+		padding-bottom: 90px;
+	}
+}
+[href*="savefrom"]{
+	display: none !important;
+}

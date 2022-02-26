@@ -1,0 +1,177 @@
+.fancy-wish{
+	.fancybox-slide--html{
+		overflow: hidden;
+	}
+}
+.wishadd__cont{
+	vertical-align: bottom;
+	// position: fixed;
+	// left: 0;
+	// right: 0;
+	// bottom: 0;
+	opacity: 0;
+	// visibility: hidden;
+	transform: translateY(150%);
+	z-index: 999;
+	padding: 0;
+	background: transparent;
+	box-shadow: none;
+	width: 100%;;
+	justify-content: center;
+	align-items: center;
+	margin: 0 !important;
+	transition: .2s ease-in-out;
+
+	&.active{
+		transform: none;
+		opacity: 1;
+	}
+
+	.fancybox-close-small{
+		display: none;
+	}
+
+
+	&.active{
+		visibility: visible;
+		opacity: 1;
+		transform: none;
+	}
+
+	@include media($w-lg) {
+		vertical-align: middle;
+		width: auto;
+		transform: translateX(-120%);
+	}
+}
+.wishadd__inner{
+	box-shadow: 10px -10px 60px rgba(0, 0, 0, 0.1);
+	transition: .4s ease-in-out;
+	background: #fff;
+	padding: 56px 20px 52px;
+	position: relative;
+	margin: 0 auto;
+
+	@include media($w-md) {
+		padding: 60px;
+	}
+	@include media($w-lg) {
+		padding: 60px;
+		max-width: 520px;
+	}
+	@include media($w-xxlg) {
+		max-width: 712px;
+		padding: 56px 102px 47px 60px;
+	}
+}
+.wishadd__close{
+	width: 40px;
+	height: 40px;
+	right: 3px;
+	top: 3px;
+	@include media($w-md) {
+		right: 23px;
+		top: 24px;
+		width: 50px;
+		height: 50px;
+		span{
+			width: 21px;
+		}
+	}
+	@include media($w-xxlg) {
+		span{
+			width: 26px;
+		}
+	}
+}
+.wishadd__title{
+	font-weight: 700;
+	font-size: 1.25rem;
+	line-height: 1.6875rem;
+	color: #221d1b;
+	margin-bottom: 26px;
+
+	svg{
+		width: 14px;
+		height: 20px;
+		stroke: currentColor;
+		fill: currentColor;
+		margin-left: 8px;
+		margin-top: 0px;
+	}
+
+	@include media($w-md) {
+		margin-bottom: 10px;
+		svg{
+			margin-left: 11px;
+			margin-top: 6px;
+		}
+	}
+	@include media($w-xxlg) {
+		font-size: 1.6875rem;
+		line-height: 2.25rem;
+		margin-bottom: 16px;
+		svg{
+			width: 21px;
+			height: 28px;
+			margin-left: 8px;
+			margin-top: 7px;
+		}
+	}
+}
+.wishadd__text{
+	font-size: 1rem;
+	line-height: 1.5rem;
+	color: $gray;
+
+	@include media($w-xxlg) {
+		font-size: 1.375rem;
+		line-height: 2.0625rem;
+	}
+}
+.wishadd__btn{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 6px;
+
+	.arrow{
+		background: #000;
+		&:before,
+		&:after{
+			background: #000;
+		}
+	}
+
+	@include media($w-md) {
+		margin-top: 32px;
+	}
+	@include media($w-xl) {
+		.btn{
+			min-height: 56px;
+		}
+	}
+	@include media($w-xxlg) {
+		margin-top: 40px;
+		.btn{
+			min-height: 78px;
+		}
+	}
+}
+.wishadd__btn-close{
+	.btn{
+		padding: 0 20px;
+	}
+	@include media($w-xl) {
+		.btn{
+			padding: 0 30px;
+		}
+	}
+	@include media($w-xxlg) {
+		.btn{
+			padding: 0 40px;
+		}
+	}
+}
+.wishadd__btn-to{
+
+}

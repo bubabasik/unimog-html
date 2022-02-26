@@ -180,13 +180,15 @@
 	
 	li{
 		&:first-child{
-			a{
+			a,
+			span{
 				padding-top: 0;
 			}
 		}
 	}
 	
-	a{
+	a,
+	span{
 		display: inline-block;
 		vertical-align: top;
 		width: 100%;

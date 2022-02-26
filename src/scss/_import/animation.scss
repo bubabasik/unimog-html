@@ -37,27 +37,27 @@
     height: 120%;
 }   
 .triggerImg{
-	@include media($w-xs){
+	@include media($w-xs) {
 	//@media (min-width: 200px) {
 		padding-top: 65.67%;
 	}
-    @include media($w-md){
+    @include media($w-md) {
 	//@media (min-width: 768px) {
 		padding-top: 144.67%;
 	}
-    @include media($w-xl){
+    @include media($w-xl) {
 	//@media (min-width: 1200px) {	
 		padding-top: 99.67%;
 	}
 }
 .catnav__image{
-	@include media($w-xl, $w-xxlg){
-	//@media (min-width: 1200px) and (max-width: 1849px){
+	@include media-min-max($w-xl, $w-xxlg) {
+	//@media (min-width: 1200px) and (max-width: 1849px) {
 		margin: 0 -344px 0 -60px;
 	}
 }
 .section_video.fix-video{
-    @include media($w-xl){
+    @include media($w-xl) {
 	//@media (min-width: 1200px) {	
 		height: 100vh;
         padding-bottom: 0px;
@@ -66,7 +66,7 @@
 	}
 }
 .section_video .animate-video{
-    @include media($w-xl){
+    @include media($w-xl) {
 	//@media (min-width: 1200px) {	
         clip: rect(0vh, 100vw, 100vh, 0vw);
         width: 101vw;

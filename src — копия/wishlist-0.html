@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Название страницы</title>
+
+	@@include('_head.html')
+
+</head>
+<body class="common-home">
+
+	@@include('_header.html')
+
+	<!-- WISH -->
+	<section class="section_wishlist">
+		<div class="container">
+			<div class="bread__cont">
+				<ul>
+					<li><a href="./index.html" class="link link-sm">Главная</a></li>
+					<li><span>Избранное</span></li>
+				</ul>
+			</div>
+			<div class="wish__empty empty__cont">
+				<div class="empty__title">Добавляйте товары в заказ, чтобы узнать их стоимость</div>
+				<div class="empty__text">В вашем заказе пока отсутствуют товары</div>
+				<div class="empty__btn">
+					<a href="./index.html" class="btn btn-transp btn-bold">
+						<span data-text="Перейти на главную">Перейти на главную</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- # WISH -->
+
+
+	<a href="#wish-form" class="btn btn-transp btn-arr btn-bold wish__to bottom goTo">
+		<i class="arrow arrow-down"></i>
+		<span data-text="Отправить запрос">Отправить запрос</span>
+	</a>
+
+	<script>
+		$(function(){
+			var ws = [];
+			ws.cont = $('.wishlist__cont');
+			ws.form = $('.wishlist__form');
+			ws.btn = $('.wish__to');
+			$(window).on('load scroll resize', function(e) {
+				if(e.type === 'load' || e.type === 'resize') {
+					ws.height = ws.btn.outerHeight();
+					ws.offset = ws.form.offset().top - 30;
+					ws.btn.css('left', ws.cont.offset().left + 'px');
+				}
+
+				if(ws.btn.offset().top + ws.height >= ws.offset) {
+					ws.btn.addClass('bottom');
+				}else{
+					ws.btn.removeClass('bottom');
+				}
+
+			});
+		})
+	</script>
+
+	@@include('_footer.html')
+
+</body>
+</html>

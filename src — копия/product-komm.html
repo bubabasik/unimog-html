@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Название страницы</title>
+
+	@@include('_head.html')
+
+</head>
+<body class="common-home">
+
+	@@include('_header.html')
+
+	<!-- PRODUCT -->
+	<section class="section_product">
+		<div class="container">
+			<div class="row">
+				<div class="bread__cont col-12 d-md-none">
+					<ul>
+						<li><a href="./index.html" class="link">Главная</a></li>
+						<li><a href="./category-komm.html" class="link">Каталог Коммунальные</a></li>
+						<li><span>Unimog</span></li>
+					</ul>
+				</div>
+				<div class="product__image col-md-6 order-md-2">
+					<div class="product__image_slider">
+						<a href="#" data-index="0"><img src="./images/product/product-big.jpg" alt=""></a>
+						<a href="#" data-index="1"><img src="./images/product/product-big.jpg" alt=""></a>
+						<a href="#" data-index="2"><img src="./images/product/product-big.jpg" alt=""></a>
+						<a href="#" data-index="3"><img src="./images/product/product-big.jpg" alt=""></a>
+						<a href="#" data-index="4"><img src="./images/product/product-big.jpg" alt=""></a>
+						<a href="#" data-index="5"><img src="./images/product/product-big.jpg" alt=""></a>
+						<a href="#" data-index="6"><img src="./images/product/product-big.jpg" alt=""></a>
+					</div>
+					<div class="product__image_bottom">
+						<div class="product__image-thumbs">
+							<div><img src="./images/product/product-thumb-1.jpg" alt=""></div>
+							<div><img src="./images/product/product-thumb-2.jpg" alt=""></div>
+							<div><img src="./images/product/product-thumb-3.jpg" alt=""></div>
+							<div><img src="./images/product/product-thumb-4.jpg" alt=""></div>
+							<div><img src="./images/product/product-thumb-5.jpg" alt=""></div>
+							<div><img src="./images/product/product-thumb-3.jpg" alt=""></div>
+							<div><img src="./images/product/product-thumb-4.jpg" alt=""></div>
+						</div>
+						<div class="product__image-nav">
+							<button class="nav__item nav__next"><span class="nav__arrow nav__arrow-right"></span></button>
+						</div>
+					</div>
+				</div>
+				<div class="product__data col-md-6 order-md-1">
+					<div class="bread__cont d-none d-md-flex">
+						<ul>
+							<li><a href="./index.html" class="link">Главная</a></li>
+							<li><a href="./category-komm.html" class="link">Каталог Коммунальные</a></li>
+							<li><span>Unimog</span></li>
+						</ul>
+					</div>
+					<div class="title title-sm">
+						<h1>Mercedes Unimog U400</h1>
+					</div>
+					<div class="product__sub">
+						Краткое описание, нельзя обойти стороною комфорт и чувства восторга и гордости, которые испытываешь при езде на этом автомобиле 
+					</div>
+					<div class="product__attrs">
+						<ul class="list-vert">
+							<li>2013 г.в.</li>
+							<li>пробег: 15000 км</li>
+							<li>колесная формула: 6х6</li>
+						</ul>
+						<ul class="list-vert">
+							<li>кунг: 5м</li>
+							<li>спальных мест: 6</li>
+							<li>спальных мест: 6</li>
+						</ul>
+					</div>
+					<div class="product__btn">
+						<a href="#modal_price" class="btn modalshow">
+							<span data-text="Узнать цену">Узнать цену</span>
+						</a>
+						<a href="#" class="btn btn-transp btn-wish d-xl-none wish wish-add">
+							<span data-text="В избранное">В избранное</span>
+							<svg class="ico"><use xlink:href="#wish-add" /></svg>
+						</a>
+						<a href="#" class="btn btn-transp btn-wish d-none d-xl-inline-flex wish wish-add">
+							<span data-text="Добавить в избранное">Добавить в избранное</span>
+							<svg class="ico"><use xlink:href="#wish-add" /></svg>
+						</a>
+					</div>
+					<div class="product__stock">
+						<span><svg class="ico ico-center"><use xlink:href="#check" /></svg></span> Под заказ от 6 недель
+					</div>
+					<div class="product__tag">
+						Теги: роторная косилка, манипулятор косилка травы, культиватор для обработки почвы.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="product__gallery">
+			<a href="./images/category/topcat-autodom.jpg" data-fancybox="product"></a>
+			<a href="./images/product/product-big.jpg" data-fancybox="product"></a>
+			<a href="./images/product/product-big.jpg" data-fancybox="product"></a>
+			<a href="./images/product/product-big.jpg" data-fancybox="product"></a>
+			<a href="./images/product/product-big.jpg" data-fancybox="product"></a>
+			<a href="./images/product/product-big.jpg" data-fancybox="product"></a>
+			<a href="./images/product/product-big.jpg" data-fancybox="product"></a>
+		</div>
+	</section>
+	<!-- # PRODUCT -->
+
+	<!-- PRINFO -->
+	<section class="section_prinfo">
+		<div class="container">
+			<div class="prinfo__cont">
+				<div class="prinfo__right order-md-2">
+					
+					<!-- ITEM -->
+					<div id="prinfo-0" class="prinfo__item">
+						<div class="prinfo__title">01. Шасси Mercedes Unimog  </div>
+						<div class="prinfo__attr">
+							<div class="prinfo__attr-item">
+								<div class="prinfo__attr-name">Модель автомобиля</div>
+								<div class="prinfo__attr-val">Mercedes-Benz Unimog</div>
+							</div>
+							<div class="prinfo__attr-item">
+								<div class="prinfo__attr-name">Тип автомобиля</div>
+								<div class="prinfo__attr-val">U400</div>
+							</div>
+							<div class="prinfo__attr-item">
+								<div class="prinfo__attr-name">Колесная формула</div>
+								<div class="prinfo__attr-val">3080 мм</div>
+							</div>
+							<div class="prinfo__attr-item">
+								<div class="prinfo__attr-name">Окраска кабины</div>
+								<div class="prinfo__attr-val">Серебряный</div>
+							</div>
+						</div>
+						<div class="prinfo__down">
+							<a href="#" class="prinfo__down-link">
+								<span class="prinfo__down-icon">
+									<svg class="ico ico-center"><use xlink:href="#download" /></svg>
+								</span>
+								<span>Скачать подробную спецификацию</span>
+							</a>
+						</div>
+						<div class="prinfo__img">
+							<img src="./images/product/prinfo.jpg" alt="">
+						</div>
+					</div>
+					<!-- # ITEM -->
+					
+					<!-- ITEM -->
+					<div id="prinfo-1" class="prinfo__item prinfo__item-simple">
+						<div class="prinfo__title">02. Навесное оборудование</div>
+						<div class="prinfo__text text">
+							<h4>Характеристики</h4>
+							<p>Кабины отличаются практичностью, прочностью и надежностью. Каждая деталь – от смещающихся в продольном и поперечном направлении подножек, рифленых корпусов наружных зеркал, решетки радиатора в виде зубцов ковша экскаватора и до поручня на крыше - рассчитана на долговечную эксплуатацию в условиях стройплощадок.</p>
+							<h4>Доступные опции</h4>
+							<ul>
+								<li>Щетка для бокового подметания с гидромотором</li>
+								<li>Сменный комплект ворса</li>
+								<li>Контейнер для сбора мусора</li>
+							</ul>
+							<p><img src="./images/product/prinfo.jpg" alt=""></p>
+							<p>Кабины отличаются практичностью, прочностью и надежностью. Каждая деталь – от смещающихся в продольном и поперечном направлении подножек, рифленых корпусов наружных зеркал, решетки радиатора в виде зубцов ковша экскаватора и до поручня на крыше - рассчитана на долговечную эксплуатацию в условиях стройплощадок.</p>
+						</div>
+						<div class="prinfo__simple">
+							<div class="prinfo__simple-title">Похожее навесное оборудования </div>
+							<div class="prinfo__simple-cont">
+								<div class="nav__cont">
+									<button class="nav__item nav__prev"><span class="nav__arrow nav__arrow-left"></span></button>
+									<button class="nav__item nav__next"><span class="nav__arrow nav__arrow-right"></span></button>
+								</div>
+								<div class="prinfo__simple-slider">
+									<a href="#"><img src="./images/product/simple.jpg" alt=""></a>
+									<a href="#"><img src="./images/product/simple.jpg" alt=""></a>
+									<a href="#"><img src="./images/product/simple.jpg" alt=""></a>
+									<a href="#"><img src="./images/product/simple.jpg" alt=""></a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<script>
+						$(function(){
+							var simpleSlider = $('.prinfo__simple-slider').slick({
+								infinite: false,
+								slidesToShow: 2,
+								slidesToScroll: 1,
+								dots: false,
+								prevArrow: '.prinfo__simple-cont .nav__prev',
+								nextArrow: '.prinfo__simple-cont .nav__next',
+								responsive: [
+								{
+									breakpoint: 768,
+									settings: {
+										slidesToShow: 1
+									}
+								}
+								]
+							});
+						})
+					</script>
+					<!-- # ITEM -->
+					
+					<!-- ITEM -->
+					<div id="prinfo-2" class="prinfo__item">
+						<div class="prinfo__title">03. Уникальные свойства Mercedes Zetros </div>
+						<div class="prinfo__tabs">
+
+							<!-- TAB -->
+							<div class="prinfo__tabs-item ">
+								<div class="prinfo__tabs-top active">
+									Рама, мосты
+									<span class="prinfo__tabs-icon"></span>
+								</div>
+								<div class="prinfo__tabs-info text" style="display: block;">
+									<p>Капот легко открывается без необходимости опрокидывать кабину, при необходимости оборудование и пассажиры могут оставаться в кабине.</p>
+									<p>Кабины отличаются практичностью, прочностью и надежностью. Каждая деталь – от смещающихся в продольном и поперечном направлении подножек, рифленых корпусов наружных зеркал, решетки радиатора в виде зубцов ковша экскаватора и до поручня на крыше - рассчитана на долговечную эксплуатацию в условиях стройплощадок.</p>
+									<div class="prinfo__tabs-img">
+										<img src="./images/product/prinfo.jpg" alt="">
+									</div>
+								</div>
+							</div>
+							<!-- # TAB -->
+
+							<!-- TAB -->
+							<div class="prinfo__tabs-item">
+								<div class="prinfo__tabs-top">
+									Трансмиссия, грузоподъемность
+									<span class="prinfo__tabs-icon"></span>
+								</div>
+								<div class="prinfo__tabs-info text">
+									<p>Капот легко открывается без необходимости опрокидывать кабину, при необходимости оборудование и пассажиры могут оставаться в кабине.</p>
+									<p>Кабины отличаются практичностью, прочностью и надежностью. Каждая деталь – от смещающихся в продольном и поперечном направлении подножек, рифленых корпусов наружных зеркал, решетки радиатора в виде зубцов ковша экскаватора и до поручня на крыше - рассчитана на долговечную эксплуатацию в условиях стройплощадок.</p>
+									<div class="prinfo__tabs-img">
+										<img src="./images/product/prinfo.jpg" alt="">
+									</div>
+								</div>
+							</div>
+							<!-- # TAB -->
+
+							<!-- TAB -->
+							<div class="prinfo__tabs-item">
+								<div class="prinfo__tabs-top">
+									Коробка передач
+									<span class="prinfo__tabs-icon"></span>
+								</div>
+								<div class="prinfo__tabs-info text">
+									<p>Капот легко открывается без необходимости опрокидывать кабину, при необходимости оборудование и пассажиры могут оставаться в кабине.</p>
+									<p>Кабины отличаются практичностью, прочностью и надежностью. Каждая деталь – от смещающихся в продольном и поперечном направлении подножек, рифленых корпусов наружных зеркал, решетки радиатора в виде зубцов ковша экскаватора и до поручня на крыше - рассчитана на долговечную эксплуатацию в условиях стройплощадок.</p>
+									<div class="prinfo__tabs-img">
+										<img src="./images/product/prinfo.jpg" alt="">
+									</div>
+								</div>
+							</div>
+							<!-- # TAB -->
+
+						</div>
+					</div>
+					<!-- # ITEM -->
+					
+					<!-- ITEM -->
+					<div id="prinfo-3" class="prinfo__item">
+						<div class="prinfo__title">04. Надежность и безопасность</div>
+						<div class="prinfo__text text">
+							<p>Автодом Mercedes Zetros –  сочетает в себе сверхпроходимость с высокой полезной нагрузкой. В автомобиле Zetros скрывается большое количество инновационных технологий, многолетний опыт и технические знания Mercedes-Benz</p>
+						</div>
+						<div class="prinfo__img">
+							<img src="./images/product/prinfo.jpg" alt="">
+						</div>
+					</div>
+					<!-- # ITEM -->
+					
+					<!-- ITEM -->
+					<div id="prinfo-4" class="prinfo__item">
+						<div class="prinfo__title">05. Скачать документы</div>
+						<div class="prinfo__doc">
+							<a href="#" class="prinfo__doc-item link_outer">
+								<span class="link">Техническая спецификация</span>
+								<span class="prinfo__doc-ext">PDF</span>
+							</a>
+							<a href="#" class="prinfo__doc-item link_outer">
+								<span class="link">Концепция Mercedes Actros</span>
+								<span class="prinfo__doc-ext">PDF</span>
+							</a>
+							<a href="#" class="prinfo__doc-item link_outer gallery__show">
+								<span class="link">Фотогалерея</span>
+							</a>
+						</div>
+					</div>
+					<!-- # ITEM -->
+
+				</div>
+				<div class="prinfo__left order-md-1">
+					<div class="prinfo__nav anim-item">
+						<ul class="list-vert d-none d-md-block">
+							<li><a href="#prinfo-0" class="link link-sm">01. Шасси</a></li>
+							<li><a href="#prinfo-1" class="link link-sm">02. Навесное оборудование</a></li>
+							<li><a href="#prinfo-2" class="link link-sm">03. Уникальные свойства</a></li>
+							<li><a href="#prinfo-3" class="link link-sm">04. Надежность и безопасность</a></li>
+							<li><a href="#prinfo-4" class="link link-sm">05. Скачать документы</a></li>
+						</ul>
+						<div class="prinfo__bottom">
+							<div class="prinfo__btn">
+								<a href="#modal_price" class="btn btn-transp modalshow">
+									<span data-text="Узнать цену">Узнать цену</span>
+								</a>
+								<button class="wishbtn wish">
+									<svg class="ico ico-center"><use xlink:href="#wish-add" /></svg>
+								</button>
+								<div class="prinfo__stock">
+									В наличии
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- # PRINFO -->
+	@@include('inc-product-script.html')
+
+	@@include('sect-material.html')
+
+	@@include('sect-consult.html')
+
+
+	@@include('sect-related.html')
+
+
+	@@include('_footer.html')
+
+
+</body>
+</html>
