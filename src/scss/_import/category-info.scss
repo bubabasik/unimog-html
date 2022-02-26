@@ -133,8 +133,6 @@
 		}
 	}
 	@include media($w-xl) {
-		font-size: 1rem;
-		line-height: 1.5rem;
 		display: flex;
 		&-list{
 			.catinfo__image{
@@ -232,8 +230,12 @@
 	}
 }
 .catinfo__list{
-	margin-top: 20px;
 	max-width: 400px;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	&:first-child{
+		margin-top: 20px;
+	}
 	& + &{
 		margin-top: 30px;
 	}
@@ -245,6 +247,14 @@
 		}
 	}
 
+	@include media($w-md) {
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+	}
+	@include media($w-lg) {
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
 	@include media($w-xl) {
 		& + &{
 			margin-top: 50px;
@@ -253,6 +263,11 @@
 	@include media($w-xxlg) {
 		max-width: 520px;
 		margin-top: 25px;
+		font-size: 1.375rem;
+		line-height: 2.0625rem;
+		&:first-child{
+			margin-top: 25px;
+		}
 		& + &{
 			margin-top: 45px;
 		}
@@ -296,6 +311,11 @@
 	font-size: 1.125rem;
 	line-height: 1.5rem;
 
+	strong{
+		color: $gray;
+		font-weight: inherit;
+	}
+
 	span{
 		display: inline-block;
 		vertical-align: top;
@@ -322,6 +342,40 @@
 		margin-top: -3px;
 		span{
 			margin-top: 36px;
+		}
+	}
+}
+
+.catinfo__text{
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+	p{
+		margin: 0 0 10px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	ul{
+		@extend .catinfo__list;
+		@extend .list-vert;
+	}
+
+	@include media($w-md) {
+		font-size: 1rem;
+		line-height: 1.25rem;
+	}
+	@include media($w-xl) {
+		font-size: 1.25rem;
+		line-height: 1.6875rem;
+		p{
+			margin-bottom: 27px;
+		}
+	}
+	@include media($w-xxlg) {
+		font-size: 1.6875rem;
+		line-height: 2.25rem;
+		p{
+			margin-bottom: 36px;
 		}
 	}
 }

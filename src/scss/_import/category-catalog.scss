@@ -6,6 +6,12 @@
 		}
 	}
 }
+.catalog__inner{
+	transition: .2s;
+	&.loading{
+		opacity: .2;
+	}
+}
 .catalog__cont{
 	margin-top: 64px;
 	& + .page__row{
