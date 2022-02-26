@@ -133,4 +133,20 @@ $( document ).ready(function() {
       y: section.offsetHeight - img.offsetHeight,
       ease: "none"
     });
+	
+	/*Появление меню при скролле вверх*/	
+	const showAnim = gsap.from('.header-animate', {
+		yPercent: -100,
+		paused: true,
+		ease: "easeOut",
+		duration: 0.3,
+	}).progress(1);
+	ScrollTrigger.create({
+		start: "top top",
+		end: 99999,
+		onUpdate: (self) => {
+			self.direction === -1 ? showAnim.play() : showAnim.reverse()
+		}
+	});
+	
 });

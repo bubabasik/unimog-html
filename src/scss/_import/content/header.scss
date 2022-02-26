@@ -30,6 +30,10 @@
 			.head__logo{
 				img{
 					max-height: 80px;
+					padding: 0;
+				}
+				.logo{
+					min-height: 80px;
 				}
 			}
 		}
@@ -57,7 +61,8 @@
 	font-size: 0.75rem;
 	text-transform: uppercase;
 	a{
-		padding-bottom: 2px;
+		//padding-bottom: 2px;
+		padding-bottom: 8px;
 		vertical-align: middle;
 	}
 	li{
@@ -121,13 +126,19 @@
 		max-width: 30%;
 		img{
 			max-height: 100px;
+			padding-top: 20px;
 		}
 	}
 }
 .logo{
 	display: inline-flex;
-	align-items: flex-start;
+	align-items: center;
 	min-height: 60px;
+	padding-top: 6px;
+		@include media($w-xl){
+			padding-top: 0px;
+			min-height: 100px;
+		}
 }
 .head__right{
 	display: flex;
@@ -243,13 +254,13 @@
 	font-weight: 700;
 	font-size: 0.75rem;
 	margin-right: 13px;
-	.link{
+	/*.link{
 		background-size: 100% 2px;
 		transition: .2s ease-in-out;
 		&:hover{
 			background-image: linear-gradient($red,$red);
 		}
-	}
+	}*/
 
 	@include media($w-md) {
 		font-size: 0.875rem;
