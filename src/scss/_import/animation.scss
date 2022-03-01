@@ -8,7 +8,7 @@
 	display: flex;
 }
 /*Анимация основного текста*/
-.anim-text {
+.anim-text, .anim-item-footer{
 	opacity: 0;
 	-webkit-transform: translateY(40px);
 	-ms-transform: translateY(40px);

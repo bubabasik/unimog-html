@@ -21,30 +21,32 @@ $( document ).ready(function() {
 		overscrollEffect: 'bounce',
 		// Поддержка тачпада
 		touchpadSupport   : true,
-	})  
+	});
 	
 	var windowWidth = $(window).width();
-	if(windowWidth > 1200){
-		/*Анимация ВИДЕО*/
-		var triggerVideo = document.getElementsByClassName("section_video")[0];
-		var video = document.getElementsByClassName("animate-video")[0];
-		gsap.registerPlugin(ScrollTrigger);
-		const tl = gsap.timeline({
-		  scrollTrigger: {
-			trigger: triggerVideo,
-			scrub: true,
-			pin: true,
-			start: "top top",
-			end: "+=150%"
-		  }
-		})
-		.to(video, {
-		  scale: 0.66, 
-		  y:"-50vh",
-		  ease: "none",
-		  delay: 0.4
-		})
-	}	
+    if($('.section_video').length) { 
+        if(windowWidth > 1200){
+            /*Анимация ВИДЕО*/
+            var triggerVideo = document.getElementsByClassName("section_video")[0];
+            var video = document.getElementsByClassName("animate-video")[0];
+            gsap.registerPlugin(ScrollTrigger);
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                trigger: triggerVideo,
+                scrub: true,
+                pin: true,
+                start: "top top",
+                end: "+=150%"
+                }
+            })
+            .to(video, {
+                scale: 0.66, 
+                y:"-50vh",
+                ease: "none",
+                delay: 0.4
+            })
+        }
+    };
 	
    /*Анимация заголовков title*/
       let splitWords = function (selector) {
@@ -121,18 +123,20 @@ $( document ).ready(function() {
       });  
 
 	/*Параллакс фото на Главной "Автомобильный дом Восток"*/
-    var section = document.getElementsByClassName('triggerImg')[0];
-    var img = document.getElementsByClassName('img__background')[0];
-    gsap.to(img, {
-      scrollTrigger: {
-        trigger: section,
-        start: "top bottom", 
-        scrub: 0.2,
-        invalidateOnRefresh: true
-      },
-      y: section.offsetHeight - img.offsetHeight,
-      ease: "none"
-    });
+	if($('.triggerImg').length) {
+        var section = document.getElementsByClassName('triggerImg')[0];
+        var img = document.getElementsByClassName('img__background')[0];
+          gsap.to(img, {
+            scrollTrigger: {
+            trigger: section,
+            start: "top bottom", 
+            scrub: 0.2,
+            invalidateOnRefresh: true
+          },
+          y: section.offsetHeight - img.offsetHeight,
+          ease: "none"
+        });
+    };
 	
 	/*Появление меню при скролле вверх*/	
 	const showAnim = gsap.from('.header-animate', {
@@ -148,5 +152,15 @@ $( document ).ready(function() {
 			self.direction === -1 ? showAnim.play() : showAnim.reverse()
 		}
 	});
-	
+
+	/*Доп. анимация для нижних элементов футера*/
+	var footerTrigger = $('.anim-item-footer').offset().top;
+	var scrollBottom = $(window).height();
+	$(window).scroll(function() {  
+		var scroll = $(window).scrollTop() + scrollBottom;
+		if ( scroll > footerTrigger ) {
+			$('.anim-item-footer').addClass('animated');
+		}
+	});
+	 
 });
