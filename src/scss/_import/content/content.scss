@@ -134,7 +134,9 @@
 	top: 10px;
 
 	&:hover{
-		background: #000;
+		@include media-max($w-md){
+			background: #000;
+		}
 		&:before,
 		&:after{
 			background: #fff;
@@ -154,6 +156,7 @@
 		left: 50%;
 		transform-origin: 50% 50%;
 		transition: .2s ease-in-out;
+		z-index: 9;
 	}
 	&:before{
 		transform: translate(-50%, -50%) rotate(-45deg);

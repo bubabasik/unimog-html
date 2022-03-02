@@ -191,15 +191,43 @@
 	transition: background .2s, opacity .2s, transform .2s;
 	border-radius: 50%;
 	margin: -20px 0 0 -20px;
-
+	cursor: pointer;
+	
+	@include media($w-md) {
+		&::after {
+			content: "";
+			display: block;
+			background-color: #000;
+			width: 62px;
+			height: 62px;
+			border-radius: 100%;
+			-ms-transform: scale(0);
+			-webkit-transform: scale(0);		
+			transform: scale(0);
+			opacity: 0;
+			transition: transform .3s, opacity .2s;
+		}
+	}	
+	
 	&:hover{
-		background: #000;
+		@include media-max($w-md){
+			background: #000;
+		}
 		span{
 			background: #fff;
+		}
+		@include media($w-md) {
+			&::after {
+				transform: scale(1);
+				-ms-transform: scale(1);
+				-webkit-transform: scale(1);
+				opacity: 1;
+			}
 		}
 	}
 
 	span{
+		z-index: 9;
 		display: inline-block;
 		vertical-align: top;
 		position: absolute;
