@@ -18,7 +18,19 @@
 	}
 }
 .pr__img{
-
+	overflow: hidden;
+	img {
+		transition: all 2.4s cubic-bezier(.075,.82,.165,1);
+		display: block;		
+	}
+}
+.pr__item{
+	&:hover{
+		img{
+			transform: scale(1.1);
+			filter: brightness(80%);				
+		}		
+	}
 }
 .pr__name{
 	color: #000;
