@@ -75,6 +75,12 @@
 	margin-bottom: 28px;
 	max-width: 100%;
 	align-items: flex-start;
+	position: relative;
+	z-index: 5;
+
+	&-auto{
+		z-index: 10;
+	}
 
 
 	@include media-max($w-md) {
@@ -91,6 +97,12 @@
 			& + .filter__item-single{
 				padding-top: 11px;
 			}
+		}
+	}
+	@include media($w-xl) {
+		&-auto{
+			flex: 0 0 695px;
+			max-width: 695px;
 		}
 	}
 	@include media($w-xxlg) {

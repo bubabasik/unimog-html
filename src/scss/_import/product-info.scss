@@ -496,6 +496,11 @@
 			}
 		}
 	}
+	@include media-min-max($w-md, $w-lg) {
+		&-slider{
+			max-width: 400px;
+		}
+	}
 	@include media($w-md) {
 		font-size: 1.5rem;
 		line-height: 2rem;
