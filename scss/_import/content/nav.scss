@@ -1,0 +1,290 @@
+.arrow{
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	width: 20px;
+	height: 2px;
+	background: #000;
+	transition: .2s;
+
+	&:before,
+	&:after{
+		content: '';
+		display: inline-block;
+		vertical-align: top;
+		position: absolute;
+		width: 11px;
+		height: 2px;
+		background: #000;
+	}
+
+	// default right
+	&:before{
+		transform-origin: 100% 100%;
+		transform: rotate(-45deg);
+		top: -1px;
+		right: -1px;
+	}
+	// default right
+	&:after{
+		transform-origin: 100% 0;
+		transform: rotate(45deg);
+		top: 1px;
+		right: -1px;
+	}
+
+	&-left{
+		&:before{
+			transform-origin: 0 100%;
+			transform: rotate(45deg);
+			left: -1px;
+		}
+		&:after{
+			transform-origin: 0 0;
+			transform: rotate(-45deg);
+			left: -1px;
+		}
+	}
+	&-down{
+		width: 2px;
+		height: 14px;
+		&:before,
+		&:after{
+			width: 2px;
+			height: 11px;
+			bottom: -1px;
+			right: auto;
+			left: 0;
+			top: auto;
+		}
+		&:before{
+			transform-origin: 100% 100%;
+			transform: rotate(-45deg);
+		}
+		&:after{
+			transform-origin: 0 100%;
+			transform: rotate(45deg);
+		}
+	}
+
+	&-up{
+		width: 2px;
+		height: 14px;
+		&:before,
+		&:after{
+			width: 2px;
+			height: 11px;
+			top: -1px;
+			right: auto;
+			left: 0;
+			top: auto;
+		}
+		&:before{
+			transform-origin: 100% 0;
+			transform: rotate(45deg);
+		}
+		&:after{
+			transform-origin: 0 0;
+			transform: rotate(-45deg);
+		}
+	}
+
+
+}
+.nav__cont{
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	position: relative;
+
+	.nav__item{
+		float: left;
+	}
+	.nav__prev{
+		margin-right: 20px;
+	}
+	.nav__page{
+		margin-left: 30px;
+	}
+
+	@include media($w-lg) {
+		.nav__page{
+			margin-left: 60px;
+		}
+	}
+	@include media($w-lg) {
+		.nav__page{
+			margin-left: 80px;
+		}
+	}
+	@include media($w-xxlg) {
+		.nav__prev{
+			margin-right: 49px;
+		}
+	}
+}
+.nav__dots{
+	
+	ul{
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		
+		&.slick-active{
+			button{
+
+			}
+		}
+	}
+	button{
+		
+	}
+
+	@include media($w-md) {
+		height: 42px;
+		margin: 0;
+	}
+}
+.nav__page{
+	font-weight: 700;
+	font-size: 0.8125rem;
+	span{
+		margin: 0	5px;
+	}
+
+	@include media($w-lg) {
+		font-size: 1rem;
+		span{
+			margin: 0	3px;
+		}
+	}
+	@include media($w-xxlg) {
+		font-size: 1.375rem;
+		line-height: 1.875rem;
+	}
+}
+.nav__item{
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	padding: 0;
+	border: none;
+	background: transparent;
+	width: 30px;
+	height: 28px;
+	cursor: pointer;
+	transition: .2s;
+	color: #000;
+	font-size: 0;
+
+	&:hover{
+		color: red;
+		.nav__arrow{
+			width: 24px;
+		}
+	}
+
+	.nav__arrow{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+	}
+
+	svg{
+		display: inline-block;
+		vertical-align: top;
+		// width: 22px;
+		// height: 42px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		// margin: -21px 0 0 -11px;
+		fill: currentColor;
+	}
+
+	@include media($w-lg) {
+		width: 42px;
+	}
+	@include media($w-xxlg) {
+		width: 54px;
+		&:hover{
+			.nav__arrow{
+				width: 40px;
+			}
+		}
+	}
+}
+.nav__prev{
+	.nav__arrow{
+		left: 0;
+	}
+}
+.nav__next{
+	.nav__arrow{
+		right: 0;
+	}
+}
+.nav__arrow{
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	width: 39px;
+	height: 2px;
+	background: #000;
+	transition: .2s;
+
+	&:before,
+	&:after{
+		content: '';
+		display: inline-block;
+		vertical-align: top;
+		position: absolute;
+		width: 8px;
+		height: 2px;
+		background: #000;
+	}
+
+	// default right
+	&:before{
+		transform-origin: 100% 100%;
+		transform: rotate(-45deg);
+		top: -1px;
+		right: -1px;
+	}
+	// default right
+	&:after{
+		transform-origin: 100% 0;
+		transform: rotate(45deg);
+		top: 1px;
+		right: -1px;
+	}
+
+	&-left{
+		&:before{
+			transform-origin: 0 100%;
+			transform: rotate(45deg);
+			left: -1px;
+		}
+		&:after{
+			transform-origin: 0 0;
+			transform: rotate(-45deg);
+			left: -1px;
+		}
+	}
+
+	@include media($w-lg) {
+		&:before,
+		&:after{
+			width: 11px;
+		}
+	}
+	@include media($w-xxlg) {
+		width: 54px;
+		&:before,
+		&:after{
+			width: 15px;
+		}
+	}
+}

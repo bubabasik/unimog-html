@@ -1,0 +1,30 @@
+.section_related{
+	& + .footer{
+		margin-top: 0;
+	}
+
+	@include media-max($w-md) {
+		.title{
+			font-size: 1.5rem;
+			line-height: 2rem;
+		}
+	}
+	@include media($w-xl) {
+		& + .footer{
+			margin-top: 13px;
+		}
+	}
+}
+.related__cont{
+	margin-top: 31px;
+
+	@include media($w-md) {
+		margin-top: 40px;
+	}
+}
+.related__outer{
+	margin-bottom: 39px;
+	@include media($w-xl) {
+		margin-bottom: 95px;
+	}
+}
