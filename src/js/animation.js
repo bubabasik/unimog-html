@@ -154,13 +154,17 @@ $( document ).ready(function() {
 	});
 
 	/*Доп. анимация для нижних элементов футера*/
-	var footerTrigger = $('.anim-item-footer').offset().top;
-	var scrollBottom = $(window).height();
-	$(window).scroll(function() {  
-		var scroll = $(window).scrollTop() - scrollBottom;
-		if ( scroll > footerTrigger ) {
-			$('.anim-item-footer').addClass('animated');
-		}
-	});
+	gsap.registerPlugin(ScrollTrigger);
+	const tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".anim-item-footer",
+			start: "top bottom"
+		 }
+	}).to(".anim-item-footer", {
+		opacity:1,
+		delay:0.2,
+		duration:0.3,
+		y:-15
+	  })
 	 
 });

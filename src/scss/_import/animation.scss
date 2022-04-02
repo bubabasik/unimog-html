@@ -8,7 +8,7 @@
 	display: flex;
 }
 /*Анимация основного текста*/
-.anim-text, .anim-item-footer{
+.anim-text{
 	opacity: 0;
 	-webkit-transform: translateY(40px);
 	-ms-transform: translateY(40px);
@@ -22,6 +22,9 @@
 		-ms-transform: translateY(0px);
 		transform: translateY(0px);
 	}
+}
+.anim-item-footer{
+	opacity:0;
 }
 /*Параллакс фото на Главной "Автомобильный дом Восток"*/  
 .triggerImg{
