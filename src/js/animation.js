@@ -157,7 +157,7 @@ $( document ).ready(function() {
 	var footerTrigger = $('.anim-item-footer').offset().top;
 	var scrollBottom = $(window).height();
 	$(window).scroll(function() {  
-		var scroll = $(window).scrollTop() + scrollBottom;
+		var scroll = $(window).scrollTop() - scrollBottom;
 		if ( scroll > footerTrigger ) {
 			$('.anim-item-footer').addClass('animated');
 		}
