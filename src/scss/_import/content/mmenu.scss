@@ -175,6 +175,34 @@
 				}
 			}
 		}
+
+		&.mmenu__closing{
+			&:before{
+				transition: .5s!important;
+				transition-delay: .3s!important;
+			}
+			.mmenu__left{
+				&:before{
+					transition: .4s!important;
+					transition-delay: .4s!important;
+				}
+			}
+			.mmenu__tabs{
+				opacity: 0!important;
+				transition-delay: .3s!important;
+			}
+			.mmenu__col{
+				opacity: 0!important;
+				transition-delay: .1s!important;
+				& + .mmenu__col{
+					transition-delay: 0s!important;
+				}
+			}
+			.mmenu__close{
+				transition-delay: .4s;
+				transform: scale(0);
+			}
+		}
 	}
 
 }
@@ -555,7 +583,7 @@
 			transition-delay: .2s;
 		}
 		.link{
-			padding-bottom: 0;
+			padding-bottom: 5px;
 		}
 	}
 	@include media($w-lg) {

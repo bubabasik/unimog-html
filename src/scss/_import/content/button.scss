@@ -247,18 +247,32 @@
 .to_catalog{
 	position: fixed;
 	z-index: 999;
-	transition: 1s, opacity .2s, visiblity .2s, background .2s, left 0s;
+	transition: 1s, opacity .2s, visiblity .2s, background .2s, left 0s, mix-blend-mode 0s, color 0s;
 	left: 20px;
 	white-space: nowrap;
 	padding: 0 40px 0 0;
 	max-width: 300px;
+	color: #000;
 	&-invert{
-		background: #fff;
-		mix-blend-mode: difference;
+		// background: #fff;
 		&:hover{
-			mix-blend-mode: overlay;
+			background: transparent;
 		}
-		// mix-blend-mode: color;
+
+		&.active{
+			mix-blend-mode: difference;
+			color: #fff;
+			&:before{
+				border-color: currentColor!important;
+			}
+			.arrow{
+				background: currentColor;
+				&:before,
+				&:after{
+					background: currentColor;
+				}
+			}
+		}
 	}
 	span{
 		margin-left: 72px;

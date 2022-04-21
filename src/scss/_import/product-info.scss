@@ -116,6 +116,9 @@
 			}
 		}
 	}
+	.link{
+		padding-bottom: 5px;
+	}
 
 	@include media($w-md) {
 		position: sticky;

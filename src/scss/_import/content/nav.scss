@@ -180,9 +180,6 @@
 
 	&:hover{
 		color: red;
-		.nav__arrow{
-			width: 24px;
-		}
 	}
 
 	.nav__arrow{
@@ -206,6 +203,11 @@
 
 	@include media($w-lg) {
 		width: 42px;
+		&:hover{
+			.nav__arrow{
+				width: 24px;
+			}
+		}
 	}
 	@include media($w-xxlg) {
 		width: 54px;

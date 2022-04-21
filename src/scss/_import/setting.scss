@@ -23,6 +23,7 @@ body{
 	overflow-x: hidden;
 	position: relative;
 	padding-top: 60px;
+	background: #fff;
 
 	@include media($w-xl) {
 		padding-top: 120px;

@@ -70,7 +70,12 @@
 	}
 
 	@include media-max($w-md) {
-		display: none;
+		flex: 0 0 100px;
+		max-width: 100px;
+		font-size: 0;
+		li:not(.head__menu_catalog) {
+			display: none;
+		}
 	}
 	@include media($w-md) {
 		flex: 0 0 40%;
@@ -97,11 +102,11 @@
 .head__logo{
 	text-align: center;
 	font-size: 0;
-	flex: 0 0 140px;
-	max-width: 140px;
-	padding-right: 10px;
+	flex: 0 0 calc(100% - 220px);
+	max-width: calc(100% - 220px);
 	img{
 		max-height: 60px;
+		max-width: 100px;
 		transition: .2s;
 	}
 
@@ -111,6 +116,7 @@
 		padding-left: 10px;
 		padding-right: 10px;
 		img{
+			max-width: 100%;
 			// max-height: 70px;
 		}
 	}
@@ -146,9 +152,10 @@
 	align-items: center;
 
 	@include media-max($w-md) {
-		flex: 0 0 calc(100% - 140px);
-		max-width: calc(100% - 140px);
+		flex: 0 0 100px;
+		max-width: 100px;
 		padding-left: 0;
+		padding-right: 9px;
 	}
 	@include media($w-md) {
 		flex: 0 0 40%;
@@ -263,6 +270,19 @@
 		}
 	}*/
 
+	svg{
+		display: none;
+	}
+
+	@include media-max($w-md) {
+		font-size: 0;
+		svg{
+			display: inline-block;
+			width: 18px;
+			height: 18px;
+			fill: #000;
+		}
+	}
 	@include media($w-md) {
 		font-size: 0.875rem;
 		margin-left: 20px;

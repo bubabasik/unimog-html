@@ -103,6 +103,10 @@
 	// margin-top: 5px;
 	margin-top: 10px;
 
+	.link{
+		padding-bottom: 5px;
+	}
+
 	@include media($w-md) {
 		margin-top: 27px;
 	}
@@ -169,6 +173,7 @@
 		color: #fff!important;
 	}
 	.link{
+		padding-bottom: 5px;
 		&:before{
 			background: #fff;
 		}
