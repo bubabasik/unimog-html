@@ -1,14 +1,22 @@
 .acomp__cont{
-	margin-top: 31px;
+	// margin-top: 31px;
+	padding-top: 20px;
 
 	@include media($w-xl) {
-		margin-top: 76px;
+		// margin-top: 76px;
+		padding-top: 39px;
 	}
 	@include media($w-xxlg) {
-		margin-top: 108px;
+		// margin-top: 108px;
+		padding-top: 60px;
 	}
 }
 .acmomp__row{
+	&:first-child{
+		&:not(.acmomp__row-text) {
+			margin-top: 11px;
+		}
+	}
 	& + &{
 		margin-top: 40px;
 	}
@@ -33,7 +41,19 @@
 			margin-top: 54px;
 		}
 	}
+	@include media($w-xl) {
+		&:first-child{
+			&:not(.acmomp__row-text) {
+				margin-top: 37px;
+			}
+		}
+	}
 	@include media($w-xxlg) {
+		&:first-child{
+			&:not(.acmomp__row-text) {
+				margin-top: 44px;
+			}
+		}
 		& + &{
 			margin-top: 40px;
 		}
