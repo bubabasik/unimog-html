@@ -19,6 +19,7 @@
 	}
 	@include media($w-xl) {
 		padding-bottom: 90px;
+		margin-top: 120px;
 		&:before{
 			height: 90px;
 		}
@@ -95,7 +96,8 @@
 	}
 	li{
 		margin-bottom: 15px;
-		transform: translate(0px, 20px) skew(0deg, 5deg);
+		// transform: translate(0px, 20px) skew(0deg, 5deg);
+		transform: translate(0px, 10px);
 		opacity: 0;
 		visibility: hidden;
 		transition: .3s ease-in-out;
@@ -122,6 +124,9 @@
 		li{
 			margin-bottom: 16px;
 		}
+	}
+	@include media($w-xl) {
+		top: 120px;
 	}
 	@include media($w-xxlg) {
 		li{
@@ -543,10 +548,11 @@
 }
 
 .prinfo__tabs{
-
+	margin-top: 30px;
 }
 .prinfo__tabs-item{
 	border-top: 1px solid #c4c4c4;
+	position: relative;
 	&:first-child{
 		.prinfo__tabs-top{
 			padding-top: 15px;
@@ -612,14 +618,14 @@
 		height: 15px;
 	}
 
-	@include media($w-md) {
+	/*@include media($w-md) {
 		&:before{
 			width: 21px;
 		}
 		&:after{
 			height: 21px;
 		}
-	}
+	}*/
 }
 .prinfo__tabs-info{
 	display: none;
@@ -659,7 +665,7 @@
 	color: #000;
 	text-decoration: none !important;
 	padding-right: 36px;
-	border-bottom: 1px solid #c4c4c4;
+	// border-bottom: 1px solid #c4c4c4;
 	&:first-child{
 		padding-top: 0;
 	}

@@ -678,6 +678,28 @@
 		height: 1px;
 	}
 
+
+	@include media($w-md) {
+		.zoom-anim{
+			display: block;
+			background-color: #000;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			position: absolute;
+			border-radius: 100%;
+			transform: scale(0);
+			opacity: 0;
+			transition: transform .3s, opacity .2s;
+		}
+		&:hover{
+			.zoom-anim{
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+	}
 	@include media($w-xl) {
 		width: 60px;
 		height: 60px;

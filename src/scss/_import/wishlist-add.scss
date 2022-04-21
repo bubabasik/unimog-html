@@ -39,7 +39,8 @@
 	}
 
 	@include media($w-lg) {
-		vertical-align: middle;
+		// vertical-align: middle;
+		vertical-align: bottom;
 		width: auto;
 		transform: translateX(-120%);
 	}

@@ -20,13 +20,14 @@
 
 	@include media($w-xl) {
 		& + .page__row{
-			margin-top: -40px;
+			// margin-top: -40px;
+			margin-top: 0;
 		}
 	}
 	@include media($w-xxlg) {
 		margin-top: 81px;
 		& + .page__row{
-			margin-top: -52px;
+			// margin-top: -52px;
 		}
 	}
 }

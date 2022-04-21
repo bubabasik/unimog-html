@@ -4,6 +4,10 @@
 
 	@include media($w-xl) {
 		padding-top: 0!important;
+		& + section:not(.section_prinfo) {
+			margin-top: 60px;
+			padding-top: 90px;
+		}
 	}
 }
 .product__image{
